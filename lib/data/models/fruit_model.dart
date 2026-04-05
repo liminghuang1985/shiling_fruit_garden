@@ -151,4 +151,7 @@ class FruitModel {
   bool isRipeningInMonth(int month) => ripeningMonths.contains(month);
   bool isPlantingInMonth(int month) => plantingMonths.contains(month);
   bool isSuitableForClimate(String zoneCode) => climateZones.contains(zoneCode);
+
+  /// 本地图标资源路径
+  String get iconAsset => 'assets/icons/fruits/$id.png';
 }
