@@ -232,7 +232,7 @@
   {"id": "gz_rkz", "name": "日喀则", "province": "西藏", "climate_zone_code": "plateau"},
   {"id": "gz_cd", "name": "昌都", "province": "西藏", "climate_zone_code": "plateau"},
   {"id": "gz_linz", "name": "林芝", "province": "西藏", "climate_zone_code": "plateau"},
-  {"gz_shann", "name": "山南", "province": "西藏", "climate_zone_code": "plateau"},
+  {"id": "gz_shann", "name": "山南", "province": "西藏", "climate_zone_code": "plateau"},
   {"id": "gz_nq", "name": "那曲", "province": "西藏", "climate_zone_code": "plateau"},
   {"id": "gz_al", "name": "阿里", "province": "西藏", "climate_zone_code": "plateau"},
 

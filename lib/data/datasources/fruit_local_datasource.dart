@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:sqflite/sqflite.dart';
 import '../models/fruit_model.dart';
+import '../../core/constants/enums.dart';
 import 'database_helper.dart';
 
 /// 水果数据源（从 assets JSON 初始化 + SQLite 查询）
