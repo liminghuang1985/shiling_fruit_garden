@@ -228,7 +228,7 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
             borderRadius: BorderRadius.circular(12),
           ),
           child: Center(
-            child: Image.asset(fruit.iconAsset, width: 28, height: 28, fit: BoxFit.contain, errorBuilder: (_, __, ___) => Text(fruit.emoji, style: const TextStyle(fontSize: 22))),
+            child: Text(fruit.emoji, style: const TextStyle(fontSize: 28)),
           ),
         ),
         title: Text(

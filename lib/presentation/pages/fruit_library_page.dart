@@ -242,7 +242,7 @@ class _FruitLibraryPageState extends ConsumerState<FruitLibraryPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(fruit.iconAsset, width: 48, height: 48, fit: BoxFit.contain, errorBuilder: (_, __, ___) => Text(fruit.emoji, style: const TextStyle(fontSize: 36))),
+            Text(fruit.emoji, style: const TextStyle(fontSize: 48)),
             const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),

@@ -38,7 +38,7 @@ class FruitDetailPage extends ConsumerWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const SizedBox(height: 20),
-                      Image.asset(fruit.iconAsset, width: 80, height: 80, fit: BoxFit.contain, errorBuilder: (_, __, ___) => Text(fruit.emoji, style: const TextStyle(fontSize: 60))),
+                      Text(fruit.emoji, style: const TextStyle(fontSize: 80)),
                       const SizedBox(height: 12),
                       Text(
                         fruit.name,

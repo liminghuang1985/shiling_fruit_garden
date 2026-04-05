@@ -146,7 +146,7 @@ class MyGardenPage extends ConsumerWidget {
                 borderRadius: BorderRadius.circular(14),
               ),
               child: Center(
-                child: Image.asset(fruit.iconAsset, width: 30, height: 30, fit: BoxFit.contain, errorBuilder: (_, __, ___) => Image.asset(fruit.iconAsset, width: 24, height: 24, fit: BoxFit.contain, errorBuilder: (_, __, ___) => Text(fruit.emoji, style: const TextStyle(fontSize: 20)))),
+                child: Text(fruit.emoji, style: const TextStyle(fontSize: 30)),
               ),
             ),
             title: Text(
@@ -409,7 +409,7 @@ class MyGardenPage extends ConsumerWidget {
         ),
         child: Row(
           children: [
-            Image.asset(fruit.iconAsset, width: 24, height: 24, fit: BoxFit.contain, errorBuilder: (_, __, ___) => Text(fruit.emoji, style: const TextStyle(fontSize: 20))),
+            Text(fruit.emoji, style: const TextStyle(fontSize: 24)),
             const SizedBox(width: 12),
             Expanded(
               child: Column(

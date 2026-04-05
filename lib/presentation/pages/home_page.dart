@@ -237,7 +237,7 @@ class HomePage extends ConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(fruit.iconAsset, width: 40, height: 40, fit: BoxFit.contain, errorBuilder: (_, __, ___) => Text(fruit.emoji, style: const TextStyle(fontSize: 32))),
+            Text(fruit.emoji, style: const TextStyle(fontSize: 40)),
             const SizedBox(height: 10),
             Text(
               fruit.name,
