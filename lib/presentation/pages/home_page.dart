@@ -38,7 +38,7 @@ class HomePage extends ConsumerWidget {
                   ? SliverToBoxAdapter(child: _buildEmptyCard('暂无当月成熟水果'))
                   : SliverToBoxAdapter(child: _buildFruitHorizontalList(fruits)),
               loading: () => SliverToBoxAdapter(child: _buildLoading()),
-              error: (_, __) => SliverToBoxAdapter(child: _buildErrorCard()),
+              error: (e, s) => SliverToBoxAdapter(child: _buildErrorCard()),
             ),
             // 当月种植水果
             SliverToBoxAdapter(
@@ -49,7 +49,7 @@ class HomePage extends ConsumerWidget {
                   ? SliverToBoxAdapter(child: _buildEmptyCard('暂无当月可种植水果'))
                   : SliverToBoxAdapter(child: _buildFruitHorizontalList(fruits)),
               loading: () => SliverToBoxAdapter(child: _buildLoading()),
-              error: (_, __) => SliverToBoxAdapter(child: _buildErrorCard()),
+              error: (e, s) => SliverToBoxAdapter(child: _buildErrorCard()),
             ),
             // 快捷入口
             SliverToBoxAdapter(
@@ -137,7 +137,7 @@ class HomePage extends ConsumerWidget {
               children: [
                 Text(emojis[month], style: const TextStyle(fontSize: 32)),
                 Text(
-                  '\${month}月',
+                  '$month月',
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
@@ -288,6 +288,9 @@ class HomePage extends ConsumerWidget {
                   title: '采摘日历',
                   subtitle: '查看各月应季水果',
                   color: Colors.orange,
+                  onTap: () {
+                    // TODO: 跳转到采摘日历页面
+                  },
                 ),
               ),
               const SizedBox(width: 12),
@@ -298,6 +301,9 @@ class HomePage extends ConsumerWidget {
                   title: '水果库',
                   subtitle: '浏览全部水果',
                   color: AppTheme.primaryGreen,
+                  onTap: () {
+                    // TODO: 跳转到水果库页面
+                  },
                 ),
               ),
             ],
@@ -313,54 +319,58 @@ class HomePage extends ConsumerWidget {
     required String title,
     required String subtitle,
     required Color color,
+    required VoidCallback onTap,
   }) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
-            blurRadius: 8,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
-      child: Row(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: color.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(12),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.05),
+              blurRadius: 8,
+              offset: const Offset(0, 2),
             ),
-            child: Icon(icon, color: color, size: 22),
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: AppTheme.textPrimary,
-                  ),
-                ),
-                Text(
-                  subtitle,
-                  style: const TextStyle(
-                    fontSize: 11,
-                    color: AppTheme.textSecondary,
-                  ),
-                ),
-              ],
+          ],
+        ),
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: color.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Icon(icon, color: color, size: 22),
             ),
-          ),
-        ],
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: AppTheme.textPrimary,
+                    ),
+                  ),
+                  Text(
+                    subtitle,
+                    style: const TextStyle(
+                      fontSize: 11,
+                      color: AppTheme.textSecondary,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
