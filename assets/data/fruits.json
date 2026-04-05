@@ -16,16 +16,39 @@
     "ph_min": 6.0,
     "ph_max": 7.5,
     "drainage": "good",
-    "fertilizer": {"base": "腐熟有机肥3-5kg/株", "top": "花果期增施磷钾肥"},
-    "planting_notes": {"seedling": "选健壮苗，根系完整", "pruning": "冬季修剪，疏除密生枝", "pollination": "需配置授粉树", "pest": "注意防治腐烂病、蚜虫"},
-    "nutritional_value": {"calories": 52, "vitamin_c": 4, "fiber": 2.4, "sugar": 10, "potassium": 107},
+    "fertilizer": {
+      "base": "腐熟有机肥3-5kg/株",
+      "top": "花果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "选健壮苗，根系完整",
+      "pruning": "冬季修剪，疏除密生枝",
+      "pollination": "需配置授粉树",
+      "pest": "注意防治腐烂病、蚜虫"
+    },
+    "nutritional_value": {
+      "calories": 52,
+      "vitamin_c": 4,
+      "fiber": 2.4,
+      "sugar": 10,
+      "potassium": 107
+    },
     "benefits": "延缓衰老、降低胆固醇、补铁补血、生津止渴",
     "contraindications": "胃酸过多者不宜多食；糖尿病患者慎食",
     "taste": "脆甜多汁、果香浓郁",
     "price_range": "5-15元/斤",
-    "climate_zones": ["cold_temperate", "temperate"],
-    "ripening_months": [9, 10],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "cold_temperate",
+      "temperate"
+    ],
+    "ripening_months": [
+      9,
+      10
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "pear_white",
@@ -44,16 +67,41 @@
     "ph_min": 6.0,
     "ph_max": 7.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥2-3kg/株", "top": "果实膨大期追施复合肥"},
-    "planting_notes": {"seedling": "选用嫁接苗", "pruning": "开心形修剪", "pollination": "配置授粉树", "pest": "防治梨木虱、黑星病"},
-    "nutritional_value": {"calories": 43, "vitamin_c": 6, "fiber": 3.1, "sugar": 8, "potassium": 92},
+    "fertilizer": {
+      "base": "有机肥2-3kg/株",
+      "top": "果实膨大期追施复合肥"
+    },
+    "planting_notes": {
+      "seedling": "选用嫁接苗",
+      "pruning": "开心形修剪",
+      "pollination": "配置授粉树",
+      "pest": "防治梨木虱、黑星病"
+    },
+    "nutritional_value": {
+      "calories": 43,
+      "vitamin_c": 6,
+      "fiber": 3.1,
+      "sugar": 8,
+      "potassium": 92
+    },
     "benefits": "润肺止咳、清热降火、生津润燥",
     "contraindications": "脾胃虚寒者不宜多食",
     "taste": "汁多味甜、酥脆可口",
     "price_range": "3-10元/斤",
-    "climate_zones": ["cold_temperate", "temperate", "subtropical"],
-    "ripening_months": [8, 9, 10],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "cold_temperate",
+      "temperate",
+      "subtropical"
+    ],
+    "ripening_months": [
+      8,
+      9,
+      10
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "peach",
@@ -72,16 +120,41 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "基肥以有机肥为主", "top": "果实膨大期增施钾肥"},
-    "planting_notes": {"seedling": "春季或秋季定植", "pruning": "三主枝自然开心形", "pollination": "多数品种需授粉", "pest": "防治桃褐腐病、蚜虫"},
-    "nutritional_value": {"calories": 42, "vitamin_c": 7, "fiber": 1.5, "sugar": 9, "potassium": 127},
+    "fertilizer": {
+      "base": "基肥以有机肥为主",
+      "top": "果实膨大期增施钾肥"
+    },
+    "planting_notes": {
+      "seedling": "春季或秋季定植",
+      "pruning": "三主枝自然开心形",
+      "pollination": "多数品种需授粉",
+      "pest": "防治桃褐腐病、蚜虫"
+    },
+    "nutritional_value": {
+      "calories": 42,
+      "vitamin_c": 7,
+      "fiber": 1.5,
+      "sugar": 9,
+      "potassium": 127
+    },
     "benefits": "补铁补血、润肠通便、美容养颜",
     "contraindications": "内热偏盛者不宜多食",
     "taste": "果肉软糯、汁多香甜",
     "price_range": "4-12元/斤",
-    "climate_zones": ["temperate", "subtropical"],
-    "ripening_months": [6, 7, 8, 9],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "temperate",
+      "subtropical"
+    ],
+    "ripening_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "cherry",
@@ -100,16 +173,39 @@
     "ph_min": 6.0,
     "ph_max": 7.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥3-5kg/株", "top": "花果期喷施叶面肥"},
-    "planting_notes": {"seedling": "秋季或春季定植", "pruning": "自然开心形或改良主干形", "pollination": "需配置授粉树或自花结实品种", "pest": "防治褐斑病、果蝇"},
-    "nutritional_value": {"calories": 63, "vitamin_c": 7, "fiber": 0.8, "sugar": 12, "potassium": 185},
+    "fertilizer": {
+      "base": "有机肥3-5kg/株",
+      "top": "花果期喷施叶面肥"
+    },
+    "planting_notes": {
+      "seedling": "秋季或春季定植",
+      "pruning": "自然开心形或改良主干形",
+      "pollination": "需配置授粉树或自花结实品种",
+      "pest": "防治褐斑病、果蝇"
+    },
+    "nutritional_value": {
+      "calories": 63,
+      "vitamin_c": 7,
+      "fiber": 0.8,
+      "sugar": 12,
+      "potassium": 185
+    },
     "benefits": "补铁补血、祛风除湿、健脾益肾",
     "contraindications": "热性体质者不宜多食",
     "taste": "酸甜可口、肉厚多汁",
     "price_range": "20-60元/斤",
-    "climate_zones": ["cold_temperate", "temperate"],
-    "ripening_months": [5, 6],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "cold_temperate",
+      "temperate"
+    ],
+    "ripening_months": [
+      5,
+      6
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "grape",
@@ -128,16 +224,41 @@
     "ph_min": 6.0,
     "ph_max": 7.5,
     "drainage": "good",
-    "fertilizer": {"base": "基肥以有机肥为主", "top": "果实膨大期增施磷钾肥"},
-    "planting_notes": {"seedling": "春季扦插或嫁接", "pruning": "冬季短梢修剪", "pollination": "自花结实", "pest": "防治霜霉病、灰霉病"},
-    "nutritional_value": {"calories": 67, "vitamin_c": 3, "fiber": 0.9, "sugar": 15, "potassium": 191},
+    "fertilizer": {
+      "base": "基肥以有机肥为主",
+      "top": "果实膨大期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "春季扦插或嫁接",
+      "pruning": "冬季短梢修剪",
+      "pollination": "自花结实",
+      "pest": "防治霜霉病、灰霉病"
+    },
+    "nutritional_value": {
+      "calories": 67,
+      "vitamin_c": 3,
+      "fiber": 0.9,
+      "sugar": 15,
+      "potassium": 191
+    },
     "benefits": "补气血、强筋骨、利尿消肿",
     "contraindications": "脾胃虚寒者不宜多食",
     "taste": "酸甜多汁、风味浓郁",
     "price_range": "8-25元/斤",
-    "climate_zones": ["temperate", "subtropical", "arid"],
-    "ripening_months": [7, 8, 9],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "temperate",
+      "subtropical",
+      "arid"
+    ],
+    "ripening_months": [
+      7,
+      8,
+      9
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "persimmon",
@@ -156,16 +277,40 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期追施复合肥"},
-    "planting_notes": {"seedling": "春季或秋季定植", "pruning": "自然开心形", "pollination": "部分品种需授粉", "pest": "防治柿圆斑病、柿蒂虫"},
-    "nutritional_value": {"calories": 71, "vitamin_c": 30, "fiber": 1.5, "sugar": 18, "potassium": 151},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期追施复合肥"
+    },
+    "planting_notes": {
+      "seedling": "春季或秋季定植",
+      "pruning": "自然开心形",
+      "pollination": "部分品种需授粉",
+      "pest": "防治柿圆斑病、柿蒂虫"
+    },
+    "nutritional_value": {
+      "calories": 71,
+      "vitamin_c": 30,
+      "fiber": 1.5,
+      "sugar": 18,
+      "potassium": 151
+    },
     "benefits": "润肺止咳、清热生津、健脾开胃",
     "contraindications": "空腹不宜食用；胃石症患者忌食",
     "taste": "软糯甘甜、入口即化",
     "price_range": "3-8元/斤",
-    "climate_zones": ["temperate", "subtropical"],
-    "ripening_months": [9, 10, 11],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "temperate",
+      "subtropical"
+    ],
+    "ripening_months": [
+      9,
+      10,
+      11
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "jujube",
@@ -184,16 +329,40 @@
     "ph_min": 5.5,
     "ph_max": 8.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "花果期增施磷钾肥"},
-    "planting_notes": {"seedling": "春季萌芽前定植", "pruning": "休眠期短截修剪", "pollination": "自花结实或配置授粉树", "pest": "防治枣疯病、枣尺蠖"},
-    "nutritional_value": {"calories": 282, "vitamin_c": 69, "fiber": 6.2, "sugar": 62, "potassium": 375},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "花果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "春季萌芽前定植",
+      "pruning": "休眠期短截修剪",
+      "pollination": "自花结实或配置授粉树",
+      "pest": "防治枣疯病、枣尺蠖"
+    },
+    "nutritional_value": {
+      "calories": 282,
+      "vitamin_c": 69,
+      "fiber": 6.2,
+      "sugar": 62,
+      "potassium": 375
+    },
     "benefits": "补中益气、养血安神、健脾养胃",
     "contraindications": "湿热内盛者不宜多食",
     "taste": "甘甜可口、肉厚核小",
     "price_range": "10-30元/斤",
-    "climate_zones": ["temperate", "arid"],
-    "ripening_months": [8, 9, 10],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "temperate",
+      "arid"
+    ],
+    "ripening_months": [
+      8,
+      9,
+      10
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "orange",
@@ -212,16 +381,43 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "梢期和果期分次追肥"},
-    "planting_notes": {"seedling": "春季或秋季带土移栽", "pruning": "成年树轻剪", "pollination": "自花结实", "pest": "防治溃疡病、红蜘蛛"},
-    "nutritional_value": {"calories": 47, "vitamin_c": 33, "fiber": 2.4, "sugar": 11, "potassium": 159},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "梢期和果期分次追肥"
+    },
+    "planting_notes": {
+      "seedling": "春季或秋季带土移栽",
+      "pruning": "成年树轻剪",
+      "pollination": "自花结实",
+      "pest": "防治溃疡病、红蜘蛛"
+    },
+    "nutritional_value": {
+      "calories": 47,
+      "vitamin_c": 33,
+      "fiber": 2.4,
+      "sugar": 11,
+      "potassium": 159
+    },
     "benefits": "生津止渴、和胃健脾、降低血脂",
     "contraindications": "胃酸过多者不宜多食",
     "taste": "汁多味甜、酸甜适中",
     "price_range": "3-10元/斤",
-    "climate_zones": ["subtropical", "tropical"],
-    "ripening_months": [10, 11, 12, 1],
-    "planting_months": [3, 4, 9, 10]
+    "climate_zones": [
+      "subtropical",
+      "tropical"
+    ],
+    "ripening_months": [
+      10,
+      11,
+      12,
+      1
+    ],
+    "planting_months": [
+      3,
+      4,
+      9,
+      10
+    ]
   },
   {
     "id": "mandarin",
@@ -240,16 +436,40 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "梢期和果期分次追施复合肥"},
-    "planting_notes": {"seedling": "带土移栽", "pruning": "成年树轻剪为主", "pollination": "自花结实", "pest": "防治潜叶蛾、红蜘蛛"},
-    "nutritional_value": {"calories": 45, "vitamin_c": 25, "fiber": 1.4, "sugar": 10, "potassium": 155},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "梢期和果期分次追施复合肥"
+    },
+    "planting_notes": {
+      "seedling": "带土移栽",
+      "pruning": "成年树轻剪为主",
+      "pollination": "自花结实",
+      "pest": "防治潜叶蛾、红蜘蛛"
+    },
+    "nutritional_value": {
+      "calories": 45,
+      "vitamin_c": 25,
+      "fiber": 1.4,
+      "sugar": 10,
+      "potassium": 155
+    },
     "benefits": "开胃理气、润肺止咳、美容养颜",
     "contraindications": "风寒咳嗽者不宜食用",
     "taste": "皮薄汁多、甜如砂糖",
     "price_range": "5-15元/斤",
-    "climate_zones": ["subtropical", "tropical"],
-    "ripening_months": [11, 12, 1],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "subtropical",
+      "tropical"
+    ],
+    "ripening_months": [
+      11,
+      12,
+      1
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "pomelo",
@@ -268,16 +488,40 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥4-5kg/株", "top": "梢期、果期分次追肥"},
-    "planting_notes": {"seedling": "带土移栽", "pruning": "成年树轻剪", "pollination": "需配置授粉树", "pest": "防治溃疡病、介壳虫"},
-    "nutritional_value": {"calories": 41, "vitamin_c": 23, "fiber": 0.8, "sugar": 9, "potassium": 119},
+    "fertilizer": {
+      "base": "有机肥4-5kg/株",
+      "top": "梢期、果期分次追肥"
+    },
+    "planting_notes": {
+      "seedling": "带土移栽",
+      "pruning": "成年树轻剪",
+      "pollination": "需配置授粉树",
+      "pest": "防治溃疡病、介壳虫"
+    },
+    "nutritional_value": {
+      "calories": 41,
+      "vitamin_c": 23,
+      "fiber": 0.8,
+      "sugar": 9,
+      "potassium": 119
+    },
     "benefits": "理气化痰、润肺清肠、补血健脾",
     "contraindications": "正在服药者慎食",
     "taste": "果肉清甜、汁多化渣",
     "price_range": "5-15元/斤",
-    "climate_zones": ["subtropical", "tropical"],
-    "ripening_months": [9, 10, 11],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "subtropical",
+      "tropical"
+    ],
+    "ripening_months": [
+      9,
+      10,
+      11
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "lemon",
@@ -296,16 +540,41 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "花果期增施磷钾肥"},
-    "planting_notes": {"seedling": "带土移栽", "pruning": "生长期轻剪", "pollination": "自花结实", "pest": "防治溃疡病、红蜘蛛"},
-    "nutritional_value": {"calories": 29, "vitamin_c": 53, "fiber": 2.8, "sugar": 4.5, "potassium": 138},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "花果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "带土移栽",
+      "pruning": "生长期轻剪",
+      "pollination": "自花结实",
+      "pest": "防治溃疡病、红蜘蛛"
+    },
+    "nutritional_value": {
+      "calories": 29,
+      "vitamin_c": 53,
+      "fiber": 2.8,
+      "sugar": 4.5,
+      "potassium": 138
+    },
     "benefits": "生津健胃、美白肌肤、化痰止咳",
     "contraindications": "胃酸过多者不宜多食",
     "taste": "味酸清香、汁多浓郁",
     "price_range": "8-20元/斤",
-    "climate_zones": ["subtropical", "tropical"],
-    "ripening_months": [8, 9, 10, 11],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "subtropical",
+      "tropical"
+    ],
+    "ripening_months": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "banana",
@@ -324,16 +593,49 @@
     "ph_min": 5.0,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "每月追施氮磷钾复合肥"},
-    "planting_notes": {"seedling": "吸芽苗或组培苗", "pruning": "及时除芽，留定吸芽", "pollination": "自花结实", "pest": "防治叶斑病、根线虫"},
-    "nutritional_value": {"calories": 93, "vitamin_c": 15, "fiber": 2.6, "sugar": 15, "potassium": 358},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "每月追施氮磷钾复合肥"
+    },
+    "planting_notes": {
+      "seedling": "吸芽苗或组培苗",
+      "pruning": "及时除芽，留定吸芽",
+      "pollination": "自花结实",
+      "pest": "防治叶斑病、根线虫"
+    },
+    "nutritional_value": {
+      "calories": 93,
+      "vitamin_c": 15,
+      "fiber": 2.6,
+      "sugar": 15,
+      "potassium": 358
+    },
     "benefits": "润肠通便、降血压、补充能量",
     "contraindications": "腹泻者不宜食用",
     "taste": "软糯香甜、果肉细腻",
     "price_range": "3-8元/斤",
-    "climate_zones": ["tropical"],
-    "ripening_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    "planting_months": [3, 4, 5]
+    "climate_zones": [
+      "tropical"
+    ],
+    "ripening_months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "planting_months": [
+      3,
+      4,
+      5
+    ]
   },
   {
     "id": "mango",
@@ -352,16 +654,42 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期增施磷钾肥"},
-    "planting_notes": {"seedling": "嫁接苗定植", "pruning": "采果后回缩修剪", "pollination": "自花结实", "pest": "防治炭疽病、脊胸天牛"},
-    "nutritional_value": {"calories": 65, "vitamin_c": 27, "fiber": 1.6, "sugar": 12, "potassium": 156},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "嫁接苗定植",
+      "pruning": "采果后回缩修剪",
+      "pollination": "自花结实",
+      "pest": "防治炭疽病、脊胸天牛"
+    },
+    "nutritional_value": {
+      "calories": 65,
+      "vitamin_c": 27,
+      "fiber": 1.6,
+      "sugar": 12,
+      "potassium": 156
+    },
     "benefits": "益胃止呕、解渴利尿、美化肌肤",
     "contraindications": "过敏体质者慎食；皮肤病者忌食",
     "taste": "果肉细腻、香甜可口",
     "price_range": "5-15元/斤",
-    "climate_zones": ["tropical", "subtropical"],
-    "ripening_months": [5, 6, 7, 8],
-    "planting_months": [3, 4, 5]
+    "climate_zones": [
+      "tropical",
+      "subtropical"
+    ],
+    "ripening_months": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "planting_months": [
+      3,
+      4,
+      5
+    ]
   },
   {
     "id": "pineapple",
@@ -380,21 +708,48 @@
     "ph_min": 4.5,
     "ph_max": 6.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "叶面喷施氮磷钾"},
-    "planting_notes": {"seedling": "裔芽苗繁殖", "pruning": "采果后割除老叶", "pollination": "自花结实", "pest": "防治心腐病、粉蚧"},
-    "nutritional_value": {"calories": 44, "vitamin_c": 18, "fiber": 1.2, "sugar": 9, "potassium": 115},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "叶面喷施氮磷钾"
+    },
+    "planting_notes": {
+      "seedling": "裔芽苗繁殖",
+      "pruning": "采果后割除老叶",
+      "pollination": "自花结实",
+      "pest": "防治心腐病、粉蚧"
+    },
+    "nutritional_value": {
+      "calories": 44,
+      "vitamin_c": 18,
+      "fiber": 1.2,
+      "sugar": 9,
+      "potassium": 115
+    },
     "benefits": "消食止泻、清热解暑、利尿消肿",
     "contraindications": "胃溃疡患者不宜食用",
     "taste": "酸甜多汁、香味浓郁",
     "price_range": "3-8元/斤",
-    "climate_zones": ["tropical", "subtropical"],
-    "ripening_months": [4, 5, 6, 7],
-    "planting_months": [3, 4, 9, 10]
+    "climate_zones": [
+      "tropical",
+      "subtropical"
+    ],
+    "ripening_months": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "planting_months": [
+      3,
+      4,
+      9,
+      10
+    ]
   },
   {
     "id": "lychee",
     "name": "荔枝",
-    "emoji": "🥭",
+    "emoji": "🔴",
     "alias": "离枝",
     "category": "evergreen",
     "origin_type": "south",
@@ -408,16 +763,40 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "花果期增施磷钾肥"},
-    "planting_notes": {"seedling": "高压苗或嫁接苗", "pruning": "采果后轻剪", "pollination": "需配置授粉树", "pest": "防治霜疫霉病、荔枝蝽"},
-    "nutritional_value": {"calories": 70, "vitamin_c": 36, "fiber": 0.5, "sugar": 15, "potassium": 193},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "花果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "高压苗或嫁接苗",
+      "pruning": "采果后轻剪",
+      "pollination": "需配置授粉树",
+      "pest": "防治霜疫霉病、荔枝蝽"
+    },
+    "nutritional_value": {
+      "calories": 70,
+      "vitamin_c": 36,
+      "fiber": 0.5,
+      "sugar": 15,
+      "potassium": 193
+    },
     "benefits": "补脑健身、开胃益脾、理气止痛",
     "contraindications": "阴虚火旺者不宜多食",
     "taste": "果肉晶莹、汁多甜美",
     "price_range": "10-30元/斤",
-    "climate_zones": ["tropical", "subtropical"],
-    "ripening_months": [5, 6, 7],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "tropical",
+      "subtropical"
+    ],
+    "ripening_months": [
+      5,
+      6,
+      7
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "longan",
@@ -436,21 +815,45 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "采果后及花期追肥"},
-    "planting_notes": {"seedling": "高压苗或嫁接苗", "pruning": "采果后修剪", "pollination": "需配置授粉树", "pest": "防治鬼帚病、荔枝蝽"},
-    "nutritional_value": {"calories": 60, "vitamin_c": 43, "fiber": 0.6, "sugar": 13, "potassium": 250},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "采果后及花期追肥"
+    },
+    "planting_notes": {
+      "seedling": "高压苗或嫁接苗",
+      "pruning": "采果后修剪",
+      "pollination": "需配置授粉树",
+      "pest": "防治鬼帚病、荔枝蝽"
+    },
+    "nutritional_value": {
+      "calories": 60,
+      "vitamin_c": 43,
+      "fiber": 0.6,
+      "sugar": 13,
+      "potassium": 250
+    },
     "benefits": "补气血、益心脾、安神定志",
     "contraindications": "湿热内盛者不宜多食",
     "taste": "果肉清甜、汁多可口",
     "price_range": "8-20元/斤",
-    "climate_zones": ["subtropical", "tropical"],
-    "ripening_months": [7, 8, 9],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "subtropical",
+      "tropical"
+    ],
+    "ripening_months": [
+      7,
+      8,
+      9
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "pitaya",
     "name": "火龙果",
-    "emoji": "🔥",
+    "emoji": "🟢",
     "alias": "红龙果、青龙果",
     "category": "tropical",
     "origin_type": "south",
@@ -464,16 +867,45 @@
     "ph_min": 6.0,
     "ph_max": 7.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期增施钾肥"},
-    "planting_notes": {"seedling": "扦插苗", "pruning": "及时摘心，选留结果蔓", "pollination": "自花结实或人工授粉", "pest": "防治茎腐病、蚂蚁"},
-    "nutritional_value": {"calories": 51, "vitamin_c": 9, "fiber": 2.0, "sugar": 11, "potassium": 220},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期增施钾肥"
+    },
+    "planting_notes": {
+      "seedling": "扦插苗",
+      "pruning": "及时摘心，选留结果蔓",
+      "pollination": "自花结实或人工授粉",
+      "pest": "防治茎腐病、蚂蚁"
+    },
+    "nutritional_value": {
+      "calories": 51,
+      "vitamin_c": 9,
+      "fiber": 2.0,
+      "sugar": 11,
+      "potassium": 220
+    },
     "benefits": "润肠通便、抗氧化、减肥降脂",
     "contraindications": "腹泻者不宜多食",
     "taste": "清甜多汁、口感细腻",
     "price_range": "8-18元/斤",
-    "climate_zones": ["tropical", "subtropical"],
-    "ripening_months": [5, 6, 7, 8, 9, 10, 11],
-    "planting_months": [3, 4, 5]
+    "climate_zones": [
+      "tropical",
+      "subtropical"
+    ],
+    "ripening_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "planting_months": [
+      3,
+      4,
+      5
+    ]
   },
   {
     "id": "watermelon",
@@ -492,16 +924,44 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "伸蔓期和膨瓜期追施复合肥"},
-    "planting_notes": {"seedling": "直播或育苗移栽", "pruning": "三蔓整枝", "pollination": "人工辅助授粉", "pest": "防治枯萎病、蚜虫"},
-    "nutritional_value": {"calories": 30, "vitamin_c": 7, "fiber": 0.4, "sugar": 6, "potassium": 112},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "伸蔓期和膨瓜期追施复合肥"
+    },
+    "planting_notes": {
+      "seedling": "直播或育苗移栽",
+      "pruning": "三蔓整枝",
+      "pollination": "人工辅助授粉",
+      "pest": "防治枯萎病、蚜虫"
+    },
+    "nutritional_value": {
+      "calories": 30,
+      "vitamin_c": 7,
+      "fiber": 0.4,
+      "sugar": 6,
+      "potassium": 112
+    },
     "benefits": "清热解暑、利尿消肿、降血压",
     "contraindications": "脾胃虚寒者不宜多食；糖尿病患者慎食",
     "taste": "甘甜多汁、爽脆解渴",
     "price_range": "2-6元/斤",
-    "climate_zones": ["temperate", "subtropical", "tropical", "arid"],
-    "ripening_months": [5, 6, 7, 8],
-    "planting_months": [3, 4, 5]
+    "climate_zones": [
+      "temperate",
+      "subtropical",
+      "tropical",
+      "arid"
+    ],
+    "ripening_months": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "planting_months": [
+      3,
+      4,
+      5
+    ]
   },
   {
     "id": "muskmelon",
@@ -520,16 +980,41 @@
     "ph_min": 6.0,
     "ph_max": 7.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "伸蔓期和膨瓜期增施磷钾肥"},
-    "planting_notes": {"seedling": "直播或育苗移栽", "pruning": "单蔓或双蔓整枝", "pollination": "人工辅助授粉", "pest": "防治白粉病、瓜蚜"},
-    "nutritional_value": {"calories": 34, "vitamin_c": 15, "fiber": 0.8, "sugar": 8, "potassium": 190},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "伸蔓期和膨瓜期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "直播或育苗移栽",
+      "pruning": "单蔓或双蔓整枝",
+      "pollination": "人工辅助授粉",
+      "pest": "防治白粉病、瓜蚜"
+    },
+    "nutritional_value": {
+      "calories": 34,
+      "vitamin_c": 15,
+      "fiber": 0.8,
+      "sugar": 8,
+      "potassium": 190
+    },
     "benefits": "清热解暑、除烦止渴、保护心血管",
     "contraindications": "腹泻者不宜多食",
     "taste": "香甜可口、肉质细腻",
     "price_range": "5-15元/斤",
-    "climate_zones": ["arid", "temperate"],
-    "ripening_months": [6, 7, 8, 9],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "arid",
+      "temperate"
+    ],
+    "ripening_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "strawberry",
@@ -548,16 +1033,44 @@
     "ph_min": 5.5,
     "ph_max": 6.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期喷施叶面肥"},
-    "planting_notes": {"seedling": "秋季或春季定植", "pruning": "及时摘除匍匐茎和老叶", "pollination": "需蜜蜂或人工授粉", "pest": "防治灰霉病、蚜虫"},
-    "nutritional_value": {"calories": 32, "vitamin_c": 58, "fiber": 1.1, "sugar": 5, "potassium": 155},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期喷施叶面肥"
+    },
+    "planting_notes": {
+      "seedling": "秋季或春季定植",
+      "pruning": "及时摘除匍匐茎和老叶",
+      "pollination": "需蜜蜂或人工授粉",
+      "pest": "防治灰霉病、蚜虫"
+    },
+    "nutritional_value": {
+      "calories": 32,
+      "vitamin_c": 58,
+      "fiber": 1.1,
+      "sugar": 5,
+      "potassium": 155
+    },
     "benefits": "保护视力、美容养颜、通便减肥",
     "contraindications": "尿路结石患者不宜多食",
     "taste": "酸甜多汁、香味浓郁",
     "price_range": "20-50元/斤",
-    "climate_zones": ["temperate", "subtropical", "plateau"],
-    "ripening_months": [11, 12, 1, 2, 3, 4],
-    "planting_months": [9, 10]
+    "climate_zones": [
+      "temperate",
+      "subtropical",
+      "plateau"
+    ],
+    "ripening_months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "planting_months": [
+      9,
+      10
+    ]
   },
   {
     "id": "blueberry",
@@ -576,16 +1089,41 @@
     "ph_min": 4.0,
     "ph_max": 5.0,
     "drainage": "good",
-    "fertilizer": {"base": "酸性有机肥", "top": "结果期增施磷钾肥"},
-    "planting_notes": {"seedling": "组培苗定植", "pruning": "成年树轻剪", "pollination": "需配置授粉树或人工授粉", "pest": "防治枝枯病、果蝇"},
-    "nutritional_value": {"calories": 57, "vitamin_c": 10, "fiber": 2.4, "sugar": 10, "potassium": 77},
+    "fertilizer": {
+      "base": "酸性有机肥",
+      "top": "结果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "组培苗定植",
+      "pruning": "成年树轻剪",
+      "pollination": "需配置授粉树或人工授粉",
+      "pest": "防治枝枯病、果蝇"
+    },
+    "nutritional_value": {
+      "calories": 57,
+      "vitamin_c": 10,
+      "fiber": 2.4,
+      "sugar": 10,
+      "potassium": 77
+    },
     "benefits": "保护视力、延缓衰老、增强记忆力",
     "contraindications": "服用抗凝药物者慎食",
     "taste": "酸甜可口、果肉细腻",
     "price_range": "30-80元/斤",
-    "climate_zones": ["cold_temperate", "temperate", "plateau"],
-    "ripening_months": [6, 7, 8],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "cold_temperate",
+      "temperate",
+      "plateau"
+    ],
+    "ripening_months": [
+      6,
+      7,
+      8
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "kiwi",
@@ -604,16 +1142,41 @@
     "ph_min": 5.5,
     "ph_max": 6.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期增施磷钾肥"},
-    "planting_notes": {"seedling": "嫁接苗", "pruning": "冬季重剪", "pollination": "需配置授粉树，人工或蜜蜂授粉", "pest": "防治溃疡病、金龟子"},
-    "nutritional_value": {"calories": 61, "vitamin_c": 131, "fiber": 2.6, "sugar": 12, "potassium": 144},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "嫁接苗",
+      "pruning": "冬季重剪",
+      "pollination": "需配置授粉树，人工或蜜蜂授粉",
+      "pest": "防治溃疡病、金龟子"
+    },
+    "nutritional_value": {
+      "calories": 61,
+      "vitamin_c": 131,
+      "fiber": 2.6,
+      "sugar": 12,
+      "potassium": 144
+    },
     "benefits": "美容养颜、通便排毒、预防癌症",
     "contraindications": "脾胃虚寒者不宜多食",
     "taste": "酸甜适中、肉质细腻",
     "price_range": "10-30元/斤",
-    "climate_zones": ["temperate", "subtropical", "plateau"],
-    "ripening_months": [9, 10, 11],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "temperate",
+      "subtropical",
+      "plateau"
+    ],
+    "ripening_months": [
+      9,
+      10,
+      11
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "pomegranate",
@@ -632,21 +1195,47 @@
     "ph_min": 5.5,
     "ph_max": 7.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "花果期增施磷钾肥"},
-    "planting_notes": {"seedling": "扦插或分株繁殖", "pruning": "冬季重剪、夏季除萌", "pollination": "自花结实", "pest": "防治干腐病、桃蛀螟"},
-    "nutritional_value": {"calories": 73, "vitamin_c": 10, "fiber": 4.9, "sugar": 16, "potassium": 218},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "花果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "扦插或分株繁殖",
+      "pruning": "冬季重剪、夏季除萌",
+      "pollination": "自花结实",
+      "pest": "防治干腐病、桃蛀螟"
+    },
+    "nutritional_value": {
+      "calories": 73,
+      "vitamin_c": 10,
+      "fiber": 4.9,
+      "sugar": 16,
+      "potassium": 218
+    },
     "benefits": "生津止渴、收敛止泻、活血养颜",
     "contraindications": "便秘者不宜多食",
     "taste": "酸甜多汁、籽粒饱满",
     "price_range": "5-15元/斤",
-    "climate_zones": ["temperate", "subtropical", "arid", "plateau"],
-    "ripening_months": [8, 9, 10],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "temperate",
+      "subtropical",
+      "arid",
+      "plateau"
+    ],
+    "ripening_months": [
+      8,
+      9,
+      10
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "fig",
     "name": "无花果",
-    "emoji": "🍏",
+    "emoji": "🟢",
     "alias": "蜜果、映日果",
     "category": "deciduous",
     "origin_type": "nationwide",
@@ -660,16 +1249,42 @@
     "ph_min": 5.5,
     "ph_max": 7.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期增施磷钾肥"},
-    "planting_notes": {"seedling": "扦插或分株繁殖", "pruning": "冬季短截修剪", "pollination": "自花结实", "pest": "防治炭疽病、果蝇"},
-    "nutritional_value": {"calories": 65, "vitamin_c": 2, "fiber": 2.5, "sugar": 14, "potassium": 193},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "扦插或分株繁殖",
+      "pruning": "冬季短截修剪",
+      "pollination": "自花结实",
+      "pest": "防治炭疽病、果蝇"
+    },
+    "nutritional_value": {
+      "calories": 65,
+      "vitamin_c": 2,
+      "fiber": 2.5,
+      "sugar": 14,
+      "potassium": 193
+    },
     "benefits": "健脾开胃、润肠通便、消肿解毒",
     "contraindications": "腹泻者不宜多食",
     "taste": "软糯香甜、风味独特",
     "price_range": "15-30元/斤",
-    "climate_zones": ["temperate", "subtropical"],
-    "ripening_months": [6, 7, 8, 9, 10],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "temperate",
+      "subtropical"
+    ],
+    "ripening_months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "mulberry",
@@ -688,16 +1303,41 @@
     "ph_min": 5.5,
     "ph_max": 7.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期增施磷钾肥"},
-    "planting_notes": {"seedling": "扦插或嫁接繁殖", "pruning": "冬季回缩修剪", "pollination": "自花结实", "pest": "防治菌核病、桑螟"},
-    "nutritional_value": {"calories": 49, "vitamin_c": 31, "fiber": 4.1, "sugar": 10, "potassium": 137},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "扦插或嫁接繁殖",
+      "pruning": "冬季回缩修剪",
+      "pollination": "自花结实",
+      "pest": "防治菌核病、桑螟"
+    },
+    "nutritional_value": {
+      "calories": 49,
+      "vitamin_c": 31,
+      "fiber": 4.1,
+      "sugar": 10,
+      "potassium": 137
+    },
     "benefits": "补肝益肾、滋阴养血、生津润燥",
     "contraindications": "脾胃虚寒者不宜多食",
     "taste": "酸甜多汁、紫黑诱人的",
     "price_range": "10-25元/斤",
-    "climate_zones": ["temperate", "subtropical", "plateau"],
-    "ripening_months": [4, 5, 6],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "temperate",
+      "subtropical",
+      "plateau"
+    ],
+    "ripening_months": [
+      4,
+      5,
+      6
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "loquat",
@@ -716,16 +1356,41 @@
     "ph_min": 5.5,
     "ph_max": 7.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "采果后和花期追肥"},
-    "planting_notes": {"seedling": "嫁接苗", "pruning": "采果后轻剪", "pollination": "需蜜蜂授粉", "pest": "防治灰斑病、黄毛虫"},
-    "nutritional_value": {"calories": 41, "vitamin_c": 8, "fiber": 0.8, "sugar": 8, "potassium": 157},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "采果后和花期追肥"
+    },
+    "planting_notes": {
+      "seedling": "嫁接苗",
+      "pruning": "采果后轻剪",
+      "pollination": "需蜜蜂授粉",
+      "pest": "防治灰斑病、黄毛虫"
+    },
+    "nutritional_value": {
+      "calories": 41,
+      "vitamin_c": 8,
+      "fiber": 0.8,
+      "sugar": 8,
+      "potassium": 157
+    },
     "benefits": "清肺止咳、和胃降逆、润肺下气",
     "contraindications": "脾虚腹泻者不宜多食",
     "taste": "果肉柔软、甜酸适口",
     "price_range": "8-20元/斤",
-    "climate_zones": ["subtropical", "tropical", "plateau"],
-    "ripening_months": [4, 5, 6],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "subtropical",
+      "tropical",
+      "plateau"
+    ],
+    "ripening_months": [
+      4,
+      5,
+      6
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "papaya",
@@ -744,16 +1409,50 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "每月追施复合肥"},
-    "planting_notes": {"seedling": "组培苗或实生苗", "pruning": "及时摘除侧芽", "pollination": "自花结实或人工授粉", "pest": "防治环斑病、蚜虫"},
-    "nutritional_value": {"calories": 29, "vitamin_c": 44, "fiber": 1.7, "sugar": 6, "potassium": 182},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "每月追施复合肥"
+    },
+    "planting_notes": {
+      "seedling": "组培苗或实生苗",
+      "pruning": "及时摘除侧芽",
+      "pollination": "自花结实或人工授粉",
+      "pest": "防治环斑病、蚜虫"
+    },
+    "nutritional_value": {
+      "calories": 29,
+      "vitamin_c": 44,
+      "fiber": 1.7,
+      "sugar": 6,
+      "potassium": 182
+    },
     "benefits": "平肝和胃、祛风除湿、通乳抗癌",
     "contraindications": "孕妇不宜食用",
     "taste": "软糯香甜、略带奶香",
     "price_range": "5-12元/斤",
-    "climate_zones": ["tropical", "subtropical"],
-    "ripening_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    "planting_months": [3, 4, 5]
+    "climate_zones": [
+      "tropical",
+      "subtropical"
+    ],
+    "ripening_months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "planting_months": [
+      3,
+      4,
+      5
+    ]
   },
   {
     "id": "durian",
@@ -772,16 +1471,42 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期增施钾肥"},
-    "planting_notes": {"seedling": "实生苗或嫁接苗", "pruning": "幼树轻剪", "pollination": "需配置授粉树", "pest": "防治 Phytophthora 病、老鼠"},
-    "nutritional_value": {"calories": 147, "vitamin_c": 19, "fiber": 3.8, "sugar": 27, "potassium": 510},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期增施钾肥"
+    },
+    "planting_notes": {
+      "seedling": "实生苗或嫁接苗",
+      "pruning": "幼树轻剪",
+      "pollination": "需配置授粉树",
+      "pest": "防治 Phytophthora 病、老鼠"
+    },
+    "nutritional_value": {
+      "calories": 147,
+      "vitamin_c": 19,
+      "fiber": 3.8,
+      "sugar": 27,
+      "potassium": 510
+    },
     "benefits": "活血散寒、缓解痛经、健脾补气",
     "contraindications": "热性体质者不宜多食；心脑血管患者忌食",
     "taste": "绵密香甜、气味浓郁",
     "price_range": "20-50元/斤",
-    "climate_zones": ["tropical"],
-    "ripening_months": [5, 6, 7, 8, 9, 10],
-    "planting_months": [6, 7]
+    "climate_zones": [
+      "tropical"
+    ],
+    "ripening_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "planting_months": [
+      6,
+      7
+    ]
   },
   {
     "id": "mangosteen",
@@ -800,16 +1525,42 @@
     "ph_min": 5.0,
     "ph_max": 6.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期增施钾肥"},
-    "planting_notes": {"seedling": "实生苗繁殖", "pruning": "幼树轻剪", "pollination": "自花结实", "pest": "防治藻斑病、介壳虫"},
-    "nutritional_value": {"calories": 73, "vitamin_c": 2, "fiber": 1.5, "sugar": 17, "potassium": 48},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期增施钾肥"
+    },
+    "planting_notes": {
+      "seedling": "实生苗繁殖",
+      "pruning": "幼树轻剪",
+      "pollination": "自花结实",
+      "pest": "防治藻斑病、介壳虫"
+    },
+    "nutritional_value": {
+      "calories": 73,
+      "vitamin_c": 2,
+      "fiber": 1.5,
+      "sugar": 17,
+      "potassium": 48
+    },
     "benefits": "清凉解热、健脾生津、抗氧化",
     "contraindications": "糖尿病患者不宜多食",
     "taste": "果肉洁白、甜酸适口",
     "price_range": "15-35元/斤",
-    "climate_zones": ["tropical"],
-    "ripening_months": [5, 6, 7, 8, 9, 10],
-    "planting_months": [6, 7]
+    "climate_zones": [
+      "tropical"
+    ],
+    "ripening_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "planting_months": [
+      6,
+      7
+    ]
   },
   {
     "id": "coconut",
@@ -828,16 +1579,48 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "每年分次追施复合肥"},
-    "planting_notes": {"seedling": "椰子果育苗", "pruning": "及时清除老叶", "pollination": "风媒或虫媒", "pest": "防治椰心叶甲、红棕象甲"},
-    "nutritional_value": {"calories": 231, "vitamin_c": 6, "fiber": 9.0, "sugar": 6, "potassium": 475},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "每年分次追施复合肥"
+    },
+    "planting_notes": {
+      "seedling": "椰子果育苗",
+      "pruning": "及时清除老叶",
+      "pollination": "风媒或虫媒",
+      "pest": "防治椰心叶甲、红棕象甲"
+    },
+    "nutritional_value": {
+      "calories": 231,
+      "vitamin_c": 6,
+      "fiber": 9.0,
+      "sugar": 6,
+      "potassium": 475
+    },
     "benefits": "消暑解渴、益气祛风、美容护肤",
     "contraindications": "低胆固醇血症患者不宜多食",
     "taste": "清甜解渴、椰香浓郁",
     "price_range": "5-15元/个",
-    "climate_zones": ["tropical"],
-    "ripening_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    "planting_months": [4, 5]
+    "climate_zones": [
+      "tropical"
+    ],
+    "ripening_months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "planting_months": [
+      4,
+      5
+    ]
   },
   {
     "id": "guava",
@@ -856,16 +1639,46 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期增施磷钾肥"},
-    "planting_notes": {"seedling": "播种或嫁接", "pruning": "采果后轻剪", "pollination": "自花结实", "pest": "防治根结线虫、蚜虫"},
-    "nutritional_value": {"calories": 68, "vitamin_c": 228, "fiber": 5.4, "sugar": 8, "potassium": 292},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "播种或嫁接",
+      "pruning": "采果后轻剪",
+      "pollination": "自花结实",
+      "pest": "防治根结线虫、蚜虫"
+    },
+    "nutritional_value": {
+      "calories": 68,
+      "vitamin_c": 228,
+      "fiber": 5.4,
+      "sugar": 8,
+      "potassium": 292
+    },
     "benefits": "收敛止泻、健脾消积、美白肌肤",
     "contraindications": "便秘者不宜多食",
     "taste": "脆甜或软糯、略有番石榴特有香气",
     "price_range": "5-12元/斤",
-    "climate_zones": ["tropical", "subtropical"],
-    "ripening_months": [5, 6, 7, 8, 9, 10, 11],
-    "planting_months": [3, 4, 9, 10]
+    "climate_zones": [
+      "tropical",
+      "subtropical"
+    ],
+    "ripening_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "planting_months": [
+      3,
+      4,
+      9,
+      10
+    ]
   },
   {
     "id": "tangerine",
@@ -884,16 +1697,41 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "梢期和果期分次追肥"},
-    "planting_notes": {"seedling": "嫁接苗", "pruning": "成年树轻剪", "pollination": "自花结实", "pest": "防治溃疡病、红蜘蛛"},
-    "nutritional_value": {"calories": 42, "vitamin_c": 30, "fiber": 1.8, "sugar": 10, "potassium": 166},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "梢期和果期分次追肥"
+    },
+    "planting_notes": {
+      "seedling": "嫁接苗",
+      "pruning": "成年树轻剪",
+      "pollination": "自花结实",
+      "pest": "防治溃疡病、红蜘蛛"
+    },
+    "nutritional_value": {
+      "calories": 42,
+      "vitamin_c": 30,
+      "fiber": 1.8,
+      "sugar": 10,
+      "potassium": 166
+    },
     "benefits": "开胃理气、润肺祛痰、清热止咳",
     "contraindications": "风寒咳嗽者不宜食用",
     "taste": "脆甜多汁、化渣性好",
     "price_range": "5-12元/斤",
-    "climate_zones": ["subtropical", "tropical"],
-    "ripening_months": [12, 1, 2, 3],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "subtropical",
+      "tropical"
+    ],
+    "ripening_months": [
+      12,
+      1,
+      2,
+      3
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "kumquat",
@@ -912,16 +1750,41 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "花果期增施磷钾肥"},
-    "planting_notes": {"seedling": "嫁接或高压", "pruning": "成年树轻剪", "pollination": "自花结实", "pest": "防治煤污病、红蜘蛛"},
-    "nutritional_value": {"calories": 58, "vitamin_c": 35, "fiber": 3.0, "sugar": 12, "potassium": 165},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "花果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "嫁接或高压",
+      "pruning": "成年树轻剪",
+      "pollination": "自花结实",
+      "pest": "防治煤污病、红蜘蛛"
+    },
+    "nutritional_value": {
+      "calories": 58,
+      "vitamin_c": 35,
+      "fiber": 3.0,
+      "sugar": 12,
+      "potassium": 165
+    },
     "benefits": "理气解郁、化痰止咳、美容护肤",
     "contraindications": "胃酸过多者不宜多食",
     "taste": "皮脆肉甜、芳香可口",
     "price_range": "10-25元/斤",
-    "climate_zones": ["subtropical", "tropical"],
-    "ripening_months": [10, 11, 12, 1],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "subtropical",
+      "tropical"
+    ],
+    "ripening_months": [
+      10,
+      11,
+      12,
+      1
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "wax_apple",
@@ -940,16 +1803,44 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "花果期增施氮磷钾"},
-    "planting_notes": {"seedling": "高压或嫁接苗", "pruning": "采果后修剪", "pollination": "自花结实或人工授粉", "pest": "防治果腐病、果蝇"},
-    "nutritional_value": {"calories": 42, "vitamin_c": 22, "fiber": 0.6, "sugar": 8, "potassium": 90},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "花果期增施氮磷钾"
+    },
+    "planting_notes": {
+      "seedling": "高压或嫁接苗",
+      "pruning": "采果后修剪",
+      "pollination": "自花结实或人工授粉",
+      "pest": "防治果腐病、果蝇"
+    },
+    "nutritional_value": {
+      "calories": 42,
+      "vitamin_c": 22,
+      "fiber": 0.6,
+      "sugar": 8,
+      "potassium": 90
+    },
     "benefits": "清热利尿、润肺止咳、安神助眠",
     "contraindications": "尿频者不宜多食",
     "taste": "清脆爽口、略有清甜",
     "price_range": "8-20元/斤",
-    "climate_zones": ["tropical", "subtropical"],
-    "ripening_months": [4, 5, 6, 7, 8, 9, 10],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "tropical",
+      "subtropical"
+    ],
+    "ripening_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "carambola",
@@ -968,21 +1859,47 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期增施磷钾肥"},
-    "planting_notes": {"seedling": "高压或嫁接", "pruning": "采果后轻剪", "pollination": "需配置授粉树", "pest": "防治炭疽病、果蝇"},
-    "nutritional_value": {"calories": 31, "vitamin_c": 34, "fiber": 2.8, "sugar": 6, "potassium": 128},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "高压或嫁接",
+      "pruning": "采果后轻剪",
+      "pollination": "需配置授粉树",
+      "pest": "防治炭疽病、果蝇"
+    },
+    "nutritional_value": {
+      "calories": 31,
+      "vitamin_c": 34,
+      "fiber": 2.8,
+      "sugar": 6,
+      "potassium": 128
+    },
     "benefits": "清热利咽、生津止渴、解酒解毒",
     "contraindications": "肾病患者不宜食用",
     "taste": "酸甜脆嫩、略有涩味",
     "price_range": "5-15元/斤",
-    "climate_zones": ["tropical", "subtropical"],
-    "ripening_months": [6, 7, 8, 9, 10],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "tropical",
+      "subtropical"
+    ],
+    "ripening_months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "wax_gourd",
     "name": "冬瓜",
-    "emoji": "🍈",
+    "emoji": "🟢",
     "alias": "东瓜、枕瓜",
     "category": "melon",
     "origin_type": "nationwide",
@@ -996,21 +1913,49 @@
     "ph_min": 5.5,
     "ph_max": 7.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "伸蔓期和膨瓜期追施复合肥"},
-    "planting_notes": {"seedling": "直播或育苗移栽", "pruning": "单蔓或双蔓整枝", "pollination": "人工辅助授粉", "pest": "防治疫病、蚜虫"},
-    "nutritional_value": {"calories": 12, "vitamin_c": 18, "fiber": 0.7, "sugar": 2, "potassium": 78},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "伸蔓期和膨瓜期追施复合肥"
+    },
+    "planting_notes": {
+      "seedling": "直播或育苗移栽",
+      "pruning": "单蔓或双蔓整枝",
+      "pollination": "人工辅助授粉",
+      "pest": "防治疫病、蚜虫"
+    },
+    "nutritional_value": {
+      "calories": 12,
+      "vitamin_c": 18,
+      "fiber": 0.7,
+      "sugar": 2,
+      "potassium": 78
+    },
     "benefits": "清热解暑、利尿消肿、减肥美容",
     "contraindications": "脾胃虚寒者不宜多食",
     "taste": "清淡爽口、肉质细腻",
     "price_range": "2-5元/斤",
-    "climate_zones": ["temperate", "subtropical", "tropical"],
-    "ripening_months": [6, 7, 8, 9, 10],
-    "planting_months": [3, 4, 5]
+    "climate_zones": [
+      "temperate",
+      "subtropical",
+      "tropical"
+    ],
+    "ripening_months": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "planting_months": [
+      3,
+      4,
+      5
+    ]
   },
   {
     "id": "bitter_melon",
     "name": "苦瓜",
-    "emoji": "🍈",
+    "emoji": "🟢",
     "alias": "凉瓜、锦荔枝",
     "category": "melon",
     "origin_type": "nationwide",
@@ -1024,21 +1969,49 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期增施磷钾肥"},
-    "planting_notes": {"seedling": "直播或育苗移栽", "pruning": "引蔓上架、摘除侧蔓", "pollination": "人工辅助授粉", "pest": "防治霜霉病、瓜实蝇"},
-    "nutritional_value": {"calories": 17, "vitamin_c": 56, "fiber": 1.4, "sugar": 2, "potassium": 256},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "直播或育苗移栽",
+      "pruning": "引蔓上架、摘除侧蔓",
+      "pollination": "人工辅助授粉",
+      "pest": "防治霜霉病、瓜实蝇"
+    },
+    "nutritional_value": {
+      "calories": 17,
+      "vitamin_c": 56,
+      "fiber": 1.4,
+      "sugar": 2,
+      "potassium": 256
+    },
     "benefits": "清热解毒、明目降糖、养颜嫩肤",
     "contraindications": "脾胃虚寒者不宜多食",
     "taste": "苦中带甘、清爽开胃",
     "price_range": "3-8元/斤",
-    "climate_zones": ["temperate", "subtropical", "tropical"],
-    "ripening_months": [5, 6, 7, 8, 9],
-    "planting_months": [3, 4, 5]
+    "climate_zones": [
+      "temperate",
+      "subtropical",
+      "tropical"
+    ],
+    "ripening_months": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "planting_months": [
+      3,
+      4,
+      5
+    ]
   },
   {
     "id": "luffa",
     "name": "丝瓜",
-    "emoji": "🍈",
+    "emoji": "🟢",
     "alias": "天丝瓜、蛮瓜",
     "category": "melon",
     "origin_type": "nationwide",
@@ -1052,16 +2025,45 @@
     "ph_min": 6.0,
     "ph_max": 7.0,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "结果期增施磷钾肥"},
-    "planting_notes": {"seedling": "直播或育苗移栽", "pruning": "引蔓上架", "pollination": "需蜜蜂或人工授粉", "pest": "防治霜霉病、蚜虫"},
-    "nutritional_value": {"calories": 16, "vitamin_c": 5, "fiber": 0.6, "sugar": 2, "potassium": 111},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "结果期增施磷钾肥"
+    },
+    "planting_notes": {
+      "seedling": "直播或育苗移栽",
+      "pruning": "引蔓上架",
+      "pollination": "需蜜蜂或人工授粉",
+      "pest": "防治霜霉病、蚜虫"
+    },
+    "nutritional_value": {
+      "calories": 16,
+      "vitamin_c": 5,
+      "fiber": 0.6,
+      "sugar": 2,
+      "potassium": 111
+    },
     "benefits": "清热化痰、凉血解毒、美颜护肤",
     "contraindications": "脾胃虚寒者不宜多食",
     "taste": "肉质软滑、清淡可口",
     "price_range": "3-6元/斤",
-    "climate_zones": ["temperate", "subtropical", "tropical"],
-    "ripening_months": [5, 6, 7, 8, 9, 10],
-    "planting_months": [3, 4, 5]
+    "climate_zones": [
+      "temperate",
+      "subtropical",
+      "tropical"
+    ],
+    "ripening_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "planting_months": [
+      3,
+      4,
+      5
+    ]
   },
   {
     "id": "taro",
@@ -1080,16 +2082,42 @@
     "ph_min": 5.5,
     "ph_max": 7.0,
     "drainage": "average",
-    "fertilizer": {"base": "有机肥为主", "top": "球茎膨大期增施钾肥"},
-    "planting_notes": {"seedling": "种芋催芽后移栽", "pruning": "及时摘除侧芽", "pollination": "一般不用", "pest": "防治疫病、斜纹夜蛾"},
-    "nutritional_value": {"calories": 79, "vitamin_c": 6, "fiber": 1.0, "sugar": 0.9, "potassium": 378},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "球茎膨大期增施钾肥"
+    },
+    "planting_notes": {
+      "seedling": "种芋催芽后移栽",
+      "pruning": "及时摘除侧芽",
+      "pollination": "一般不用",
+      "pest": "防治疫病、斜纹夜蛾"
+    },
+    "nutritional_value": {
+      "calories": 79,
+      "vitamin_c": 6,
+      "fiber": 1.0,
+      "sugar": 0.9,
+      "potassium": 378
+    },
     "benefits": "健脾益胃、补中益气、解毒散结",
     "contraindications": "生食有毒，必须煮熟；过敏体质者慎食",
     "taste": "软糯细腻、绵密可口",
     "price_range": "3-8元/斤",
-    "climate_zones": ["subtropical", "tropical", "temperate"],
-    "ripening_months": [8, 9, 10, 11],
-    "planting_months": [3, 4]
+    "climate_zones": [
+      "subtropical",
+      "tropical",
+      "temperate"
+    ],
+    "ripening_months": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "planting_months": [
+      3,
+      4
+    ]
   },
   {
     "id": "sweet_potato",
@@ -1108,15 +2136,340 @@
     "ph_min": 5.0,
     "ph_max": 6.5,
     "drainage": "good",
-    "fertilizer": {"base": "有机肥为主", "top": "块根膨大期增施钾肥"},
-    "planting_notes": {"seedling": "扦插或直播", "pruning": "及时摘心控蔓", "pollination": "一般不用", "pest": "防治黑斑病、地下害虫"},
-    "nutritional_value": {"calories": 86, "vitamin_c": 2, "fiber": 2.2, "sugar": 4, "potassium": 130},
+    "fertilizer": {
+      "base": "有机肥为主",
+      "top": "块根膨大期增施钾肥"
+    },
+    "planting_notes": {
+      "seedling": "扦插或直播",
+      "pruning": "及时摘心控蔓",
+      "pollination": "一般不用",
+      "pest": "防治黑斑病、地下害虫"
+    },
+    "nutritional_value": {
+      "calories": 86,
+      "vitamin_c": 2,
+      "fiber": 2.2,
+      "sugar": 4,
+      "potassium": 130
+    },
     "benefits": "补脾益气、宽肠通便、防癌抗衰老",
     "contraindications": "胃酸过多者不宜多食；糖尿病患者慎食",
     "taste": "香甜软糯、入口即化",
     "price_range": "2-5元/斤",
-    "climate_zones": ["temperate", "subtropical", "tropical", "arid"],
-    "ripening_months": [8, 9, 10, 11],
-    "planting_months": [4, 5, 6]
+    "climate_zones": [
+      "temperate",
+      "subtropical",
+      "tropical",
+      "arid"
+    ],
+    "ripening_months": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "planting_months": [
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "id": "gs",
+    "name": "甘蔗",
+    "emoji": "🟢",
+    "category": "tropical",
+    "climate_zones": [
+      "warm",
+      "subtropical"
+    ],
+    "planting_months": [
+      3,
+      4
+    ],
+    "harvest_months": [
+      10,
+      11,
+      12
+    ],
+    "maturity_days": 240,
+    "min_temp": 15,
+    "max_temp": 35,
+    "benefits": "补血润燥、清热生津、健脾利尿",
+    "taste": "甘甜多汁",
+    "storage": "阴凉通风处储存"
+  },
+  {
+    "id": "pxg",
+    "name": "百香果",
+    "emoji": "🟣",
+    "category": "tropical",
+    "climate_zones": [
+      "subtropical"
+    ],
+    "planting_months": [
+      3,
+      4,
+      5
+    ],
+    "harvest_months": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "maturity_days": 180,
+    "min_temp": 20,
+    "max_temp": 30,
+    "benefits": "维C丰富、增强免疫力、延缓衰老",
+    "taste": "酸甜浓郁",
+    "storage": "常温保存10天，冷藏可延长"
+  },
+  {
+    "id": "ss",
+    "name": "释迦",
+    "emoji": "🟡",
+    "category": "tropical",
+    "climate_zones": [
+      "subtropical"
+    ],
+    "planting_months": [
+      4,
+      5,
+      6
+    ],
+    "harvest_months": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "maturity_days": 210,
+    "min_temp": 15,
+    "max_temp": 33,
+    "benefits": "润肠通便、美容养颜",
+    "taste": "甜蜜柔软",
+    "storage": "成熟后冷藏保存3-5天"
+  },
+  {
+    "id": "bml",
+    "name": "菠萝蜜",
+    "emoji": "🟡",
+    "category": "tropical",
+    "climate_zones": [
+      "tropical",
+      "subtropical"
+    ],
+    "planting_months": [
+      3,
+      4,
+      5
+    ],
+    "harvest_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "maturity_days": 220,
+    "min_temp": 22,
+    "max_temp": 35,
+    "benefits": "补中益气、通便下气、增强体质",
+    "taste": "香甜如蜜",
+    "storage": "阴凉通风处储存，切开冷藏"
+  },
+  {
+    "id": "hmd",
+    "name": "红毛丹",
+    "emoji": "🔴",
+    "category": "tropical",
+    "climate_zones": [
+      "tropical"
+    ],
+    "planting_months": [
+      5,
+      6
+    ],
+    "harvest_months": [
+      8,
+      9,
+      10
+    ],
+    "maturity_days": 200,
+    "min_temp": 24,
+    "max_temp": 35,
+    "benefits": "清热解毒、补血理气",
+    "taste": "酸甜多汁",
+    "storage": "冷藏保存约1周"
+  },
+  {
+    "id": "sz",
+    "name": "山楂",
+    "emoji": "🔴",
+    "category": "deciduous",
+    "climate_zones": [
+      "temperate"
+    ],
+    "planting_months": [
+      3,
+      4
+    ],
+    "harvest_months": [
+      9,
+      10
+    ],
+    "maturity_days": 180,
+    "min_temp": -5,
+    "max_temp": 30,
+    "benefits": "消食化积、活血散瘀、降血脂",
+    "taste": "酸甜开胃",
+    "storage": "阴凉干燥处储存"
+  },
+  {
+    "id": "lmz",
+    "name": "李子",
+    "emoji": "🟣",
+    "category": "deciduous",
+    "climate_zones": [
+      "temperate",
+      "warm"
+    ],
+    "planting_months": [
+      3,
+      4
+    ],
+    "harvest_months": [
+      6,
+      7,
+      8
+    ],
+    "maturity_days": 120,
+    "min_temp": -10,
+    "max_temp": 32,
+    "benefits": "清热利水、补血养颜",
+    "taste": "酸甜多汁",
+    "storage": "冷藏保存5-7天"
+  },
+  {
+    "id": "xzt",
+    "name": "杏子",
+    "emoji": "🟠",
+    "category": "deciduous",
+    "climate_zones": [
+      "temperate"
+    ],
+    "planting_months": [
+      3,
+      4
+    ],
+    "harvest_months": [
+      6,
+      7
+    ],
+    "maturity_days": 100,
+    "min_temp": -20,
+    "max_temp": 30,
+    "benefits": "润肺止咳、延缓衰老",
+    "taste": "酸甜可口",
+    "storage": "常温保存3天，冷藏约1周"
+  },
+  {
+    "id": "wh",
+    "name": "乌梅",
+    "emoji": "⚫",
+    "category": "deciduous",
+    "climate_zones": [
+      "temperate",
+      "warm"
+    ],
+    "planting_months": [
+      3,
+      4
+    ],
+    "harvest_months": [
+      5,
+      6
+    ],
+    "maturity_days": 90,
+    "min_temp": -15,
+    "max_temp": 30,
+    "benefits": "敛肺止咳、生津止渴、安蛔",
+    "taste": "酸涩回甘",
+    "storage": "阴凉干燥处储存"
+  },
+  {
+    "id": "wgg",
+    "name": "文冠果",
+    "emoji": "🟤",
+    "category": "deciduous",
+    "climate_zones": [
+      "temperate"
+    ],
+    "planting_months": [
+      4,
+      5
+    ],
+    "harvest_months": [
+      9,
+      10
+    ],
+    "maturity_days": 200,
+    "min_temp": -30,
+    "max_temp": 30,
+    "benefits": "油料作物，种子可榨油",
+    "taste": "果肉酸甜",
+    "storage": "阴凉通风处储存"
+  },
+  {
+    "id": "st",
+    "name": "酸甜果",
+    "emoji": "🟠",
+    "category": "berry",
+    "climate_zones": [
+      "temperate",
+      "warm"
+    ],
+    "planting_months": [
+      3,
+      4
+    ],
+    "harvest_months": [
+      8,
+      9,
+      10
+    ],
+    "maturity_days": 160,
+    "min_temp": -10,
+    "max_temp": 30,
+    "benefits": "开胃消食、降血脂",
+    "taste": "酸甜适中",
+    "storage": "冷藏保存约7天"
+  },
+  {
+    "id": "mg",
+    "name": "蜜柑",
+    "emoji": "🍊",
+    "category": "evergreen",
+    "climate_zones": [
+      "subtropical",
+      "warm"
+    ],
+    "planting_months": [
+      3,
+      4,
+      5
+    ],
+    "harvest_months": [
+      10,
+      11,
+      12
+    ],
+    "maturity_days": 240,
+    "min_temp": 5,
+    "max_temp": 35,
+    "benefits": "维C丰富、开胃理气",
+    "taste": "甘甜无渣",
+    "storage": "常温可保存2周"
   }
 ]
