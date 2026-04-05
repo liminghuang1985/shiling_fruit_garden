@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../data/datasources/fruit_local_datasource.dart';
@@ -121,3 +122,81 @@ final allProvincesProvider = FutureProvider<List<String>>((ref) async {
   final ds = ref.watch(cityLocalDatasourceProvider);
   return ds.getAllProvinces();
 });
+
+// ─── Garden Harvest Records ────────────────────────────────────
+class HarvestRecord {
+  final String fruitId;
+  final DateTime harvestDate;
+  final String? notes;
+
+  const HarvestRecord({
+    required this.fruitId,
+    required this.harvestDate,
+    this.notes,
+  });
+
+  factory HarvestRecord.fromJson(Map<String, dynamic> json) {
+    return HarvestRecord(
+      fruitId: json['fruit_id'] as String,
+      harvestDate: DateTime.parse(json['harvest_date'] as String),
+      notes: json['notes'] as String?,
+    );
+  }
+
+  Map<String, dynamic> toJson() => {
+    'fruit_id': fruitId,
+    'harvest_date': harvestDate.toIso8601String(),
+    'notes': notes,
+  };
+}
+
+class GardenRecordsNotifier extends StateNotifier<List<HarvestRecord>> {
+  GardenRecordsNotifier() : super([]) {
+    _load();
+  }
+
+  Future<void> _load() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final json = prefs.getString('garden_records');
+      if (json != null) {
+        final List<dynamic> list = jsonDecode(json);
+        state = list.map((e) => HarvestRecord.fromJson(e)).toList();
+      }
+    } catch (_) {}
+  }
+
+  Future<void> _save() async {
+    final prefs = await SharedPreferences.getInstance();
+    final json = jsonEncode(state.map((r) => r.toJson()).toList());
+    await prefs.setString('garden_records', json);
+  }
+
+  Future<void> addRecord(String fruitId, DateTime harvestDate, {String? notes}) async {
+    state = [
+      ...state,
+      HarvestRecord(fruitId: fruitId, harvestDate: harvestDate, notes: notes),
+    ];
+    await _save();
+  }
+
+  Future<void> removeRecord(String fruitId, DateTime harvestDate) async {
+    state = state
+        .where((r) =>
+            !(r.fruitId == fruitId &&
+                r.harvestDate.year == harvestDate.year &&
+                r.harvestDate.month == harvestDate.month &&
+                r.harvestDate.day == harvestDate.day))
+        .toList();
+    await _save();
+  }
+
+  List<HarvestRecord> recordsForFruit(String fruitId) {
+    return state.where((r) => r.fruitId == fruitId).toList();
+  }
+}
+
+final gardenRecordsProvider =
+    StateNotifierProvider<GardenRecordsNotifier, List<HarvestRecord>>(
+  (ref) => GardenRecordsNotifier(),
+);
