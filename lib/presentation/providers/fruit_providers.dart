@@ -54,13 +54,14 @@ final allFruitsProvider = FutureProvider<List<FruitModel>>((ref) async {
 });
 
 final currentMonthRipeningFruitsProvider = FutureProvider<List<FruitModel>>((ref) async {
+  // 首页当月成熟水果：全国通用，不按气候区过滤
   final ds = ref.watch(fruitLocalDatasourceProvider);
-  final city = ref.watch(selectedCityProvider);
   final month = DateTime.now().month;
-  return ds.getFruitsRipeningInMonth(month, city?.climateZoneCode);
+  return ds.getFruitsRipeningInMonth(month, null);
 });
 
 final currentMonthPlantingFruitsProvider = FutureProvider<List<FruitModel>>((ref) async {
+  // 首页当月种植推荐：可按用户城市气候区个性化（可选）
   final ds = ref.watch(fruitLocalDatasourceProvider);
   final city = ref.watch(selectedCityProvider);
   final month = DateTime.now().month;
@@ -68,15 +69,15 @@ final currentMonthPlantingFruitsProvider = FutureProvider<List<FruitModel>>((ref
 });
 
 final monthRipeningFruitsProvider = FutureProvider.family<List<FruitModel>, int>((ref, month) async {
+  // 日历显示所有当月成熟水果，不按气候区过滤
   final ds = ref.watch(fruitLocalDatasourceProvider);
-  final city = ref.watch(selectedCityProvider);
-  return ds.getFruitsRipeningInMonth(month, city?.climateZoneCode);
+  return ds.getFruitsRipeningInMonth(month, null);
 });
 
 final monthPlantingFruitsProvider = FutureProvider.family<List<FruitModel>, int>((ref, month) async {
+  // 日历显示所有当月可种植水果，不按气候区过滤
   final ds = ref.watch(fruitLocalDatasourceProvider);
-  final city = ref.watch(selectedCityProvider);
-  return ds.getFruitsPlantingInMonth(month, city?.climateZoneCode);
+  return ds.getFruitsPlantingInMonth(month, null);
 });
 
 // ─── User Favorites ─────────────────────────────────────────────
