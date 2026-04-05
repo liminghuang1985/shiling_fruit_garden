@@ -1,0 +1,44 @@
+[
+  {
+    "code": "cold_temperate",
+    "name": "寒温带",
+    "name_short": "东北北部",
+    "provinces": ["黑龙江", "内蒙古"],
+    "description": "冬季严寒，夏季短促"
+  },
+  {
+    "code": "temperate",
+    "name": "温带",
+    "name_short": "华北/西北",
+    "provinces": ["北京", "天津", "河北", "山西", "山东", "河南", "陕西", "甘肃", "宁夏", "辽宁", "吉林"],
+    "description": "四季分明，冬季寒冷"
+  },
+  {
+    "code": "subtropical",
+    "name": "亚热带",
+    "name_short": "华中/华东",
+    "provinces": ["上海", "江苏", "浙江", "安徽", "福建", "江西", "湖北", "湖南", "广东", "广西", "贵州", "四川", "重庆"],
+    "description": "温暖湿润，四季分明"
+  },
+  {
+    "code": "tropical",
+    "name": "热带",
+    "name_short": "华南/海南",
+    "provinces": ["海南", "广东", "广西", "云南"],
+    "description": "长夏无冬，高温多雨"
+  },
+  {
+    "code": "plateau",
+    "name": "高原",
+    "name_short": "西南高原",
+    "provinces": ["云南", "四川", "西藏", "青海"],
+    "description": "昼夜温差大，日照充足"
+  },
+  {
+    "code": "arid",
+    "name": "干旱区",
+    "name_short": "新疆",
+    "provinces": ["新疆"],
+    "description": "降水稀少，日照强烈，昼夜温差大"
+  }
+]
