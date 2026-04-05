@@ -153,5 +153,5 @@ class FruitModel {
   bool isSuitableForClimate(String zoneCode) => climateZones.contains(zoneCode);
 
   /// 本地图标资源路径
-  String get iconAsset => 'assets/icons/fruits/$id.webp';
+  String get iconAsset => 'assets/icons/fruits/$id.png';
 }
