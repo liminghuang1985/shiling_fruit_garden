@@ -1,5 +1,4 @@
 import 'package:flutter/foundation.dart';
-import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
@@ -173,6 +172,14 @@ class DatabaseHelper {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         fruit_id TEXT UNIQUE,
         created_at INTEGER
+      )
+    ''');
+
+    // Seed 版本信息表（统一管理各 JSON 数据版本）
+    await db.execute('''
+      CREATE TABLE seed_info (
+        key TEXT PRIMARY KEY,
+        version INTEGER NOT NULL
       )
     ''');
 

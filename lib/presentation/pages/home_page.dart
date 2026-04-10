@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/theme/app_theme.dart';
-import '../../data/models/fruit_model.dart';
+import '../../domain/entities/fruit_entity.dart';
 import '../providers/fruit_providers.dart';
 import 'fruit_detail_page.dart';
 import 'city_select_page.dart';
@@ -15,6 +15,7 @@ class HomePage extends ConsumerWidget {
     final currentMonth = DateTime.now().month;
     final currentMonthRipening = ref.watch(currentMonthRipeningFruitsProvider);
     final currentMonthPlanting = ref.watch(currentMonthPlantingFruitsProvider);
+    final currentSolarTerms = ref.watch(currentSolarTermsProvider);
 
     return Scaffold(
       backgroundColor: AppTheme.background,
@@ -25,9 +26,13 @@ class HomePage extends ConsumerWidget {
             SliverToBoxAdapter(
               child: _buildHeader(context, ref, selectedCity),
             ),
-            // 当月标题
+            // 当月标题（含节气）
             SliverToBoxAdapter(
-              child: _buildMonthBanner(currentMonth),
+              child: currentSolarTerms.when(
+                data: (terms) => _buildMonthBanner(currentMonth, terms),
+                loading: () => _buildMonthBanner(currentMonth, []),
+                error: (_, __) => _buildMonthBanner(currentMonth, []),
+              ),
             ),
             // 当月成熟水果
             SliverToBoxAdapter(
@@ -50,10 +55,6 @@ class HomePage extends ConsumerWidget {
                   : SliverToBoxAdapter(child: _buildFruitHorizontalList(fruits)),
               loading: () => SliverToBoxAdapter(child: _buildLoading()),
               error: (e, s) => SliverToBoxAdapter(child: _buildErrorCard()),
-            ),
-            // 快捷入口
-            SliverToBoxAdapter(
-              child: _buildQuickActions(context),
             ),
             const SliverToBoxAdapter(child: SizedBox(height: 20)),
           ],
@@ -111,7 +112,7 @@ class HomePage extends ConsumerWidget {
     );
   }
 
-  Widget _buildMonthBanner(int month) {
+  Widget _buildMonthBanner(int month, List<String> solarTerms) {
     final monthNames = ['', '一月', '二月', '三月', '四月', '五月', '六月',
       '七月', '八月', '九月', '十月', '十一月', '十二月'];
     final emojis = ['', '🥝', '🍑', '🍓', '🍒', '🍇', '🍉',
@@ -168,6 +169,28 @@ class HomePage extends ConsumerWidget {
                     color: Colors.white.withValues(alpha: 0.9),
                   ),
                 ),
+                if (solarTerms.isNotEmpty) ...[
+                  const SizedBox(height: 8),
+                  Wrap(
+                    spacing: 6,
+                    runSpacing: 4,
+                    children: solarTerms.map((term) => Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.25),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Text(
+                        '🌿 $term',
+                        style: const TextStyle(
+                          fontSize: 12,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    )).toList(),
+                  ),
+                ],
               ],
             ),
           ),
@@ -176,7 +199,7 @@ class HomePage extends ConsumerWidget {
     );
   }
 
-  Widget _buildSectionTitle(String title, AsyncValue<List<FruitModel>> provider) {
+  Widget _buildSectionTitle(String title, AsyncValue<List<FruitEntity>> provider) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 24, 20, 12),
       child: Row(
@@ -194,7 +217,7 @@ class HomePage extends ConsumerWidget {
     );
   }
 
-  Widget _buildFruitHorizontalList(List<FruitModel> fruits) {
+  Widget _buildFruitHorizontalList(List<FruitEntity> fruits) {
     return SizedBox(
       height: 160,
       child: ListView.builder(
@@ -209,7 +232,7 @@ class HomePage extends ConsumerWidget {
     );
   }
 
-  Widget _buildFruitCard(BuildContext context, FruitModel fruit) {
+  Widget _buildFruitCard(BuildContext context, FruitEntity fruit) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -256,117 +279,6 @@ class HomePage extends ConsumerWidget {
               style: const TextStyle(
                 fontSize: 11,
                 color: AppTheme.textSecondary,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildQuickActions(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 24, 20, 0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            '快捷入口',
-            style: TextStyle(
-              fontSize: 17,
-              fontWeight: FontWeight.bold,
-              color: AppTheme.textPrimary,
-            ),
-          ),
-          const SizedBox(height: 12),
-          Row(
-            children: [
-              Expanded(
-                child: _buildActionCard(
-                  context,
-                  icon: Icons.calendar_month,
-                  title: '采摘日历',
-                  subtitle: '查看各月应季水果',
-                  color: Colors.orange,
-                  onTap: () {
-                    // TODO: 跳转到采摘日历页面
-                  },
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: _buildActionCard(
-                  context,
-                  icon: Icons.eco,
-                  title: '水果库',
-                  subtitle: '浏览全部水果',
-                  color: AppTheme.primaryGreen,
-                  onTap: () {
-                    // TODO: 跳转到水果库页面
-                  },
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildActionCard(
-    BuildContext context, {
-    required IconData icon,
-    required String title,
-    required String subtitle,
-    required Color color,
-    required VoidCallback onTap,
-  }) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.05),
-              blurRadius: 8,
-              offset: const Offset(0, 2),
-            ),
-          ],
-        ),
-        child: Row(
-          children: [
-            Container(
-              padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: color.withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Icon(icon, color: color, size: 22),
-            ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                      color: AppTheme.textPrimary,
-                    ),
-                  ),
-                  Text(
-                    subtitle,
-                    style: const TextStyle(
-                      fontSize: 11,
-                      color: AppTheme.textSecondary,
-                    ),
-                  ),
-                ],
               ),
             ),
           ],

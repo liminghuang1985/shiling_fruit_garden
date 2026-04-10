@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/theme/app_theme.dart';
-import '../../data/models/fruit_model.dart';
+import '../../domain/entities/fruit_entity.dart';
 import '../providers/fruit_providers.dart';
 import 'fruit_detail_page.dart';
 
@@ -155,7 +155,7 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
     );
   }
 
-  Widget _buildRipeningList(AsyncValue<List<FruitModel>> ripening) {
+  Widget _buildRipeningList(AsyncValue<List<FruitEntity>> ripening) {
     return ripening.when(
       data: (fruits) {
         if (fruits.isEmpty) {
@@ -170,7 +170,7 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
     );
   }
 
-  Widget _buildPlantingList(AsyncValue<List<FruitModel>> planting) {
+  Widget _buildPlantingList(AsyncValue<List<FruitEntity>> planting) {
     return planting.when(
       data: (fruits) {
         if (fruits.isEmpty) {
@@ -185,7 +185,7 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
     );
   }
 
-  Widget _buildFruitList(List<FruitModel> fruits) {
+  Widget _buildFruitList(List<FruitEntity> fruits) {
     return ListView.builder(
       padding: const EdgeInsets.all(16),
       itemCount: fruits.length,
@@ -196,7 +196,7 @@ class _CalendarPageState extends ConsumerState<CalendarPage> {
     );
   }
 
-  Widget _buildFruitTile(FruitModel fruit) {
+  Widget _buildFruitTile(FruitEntity fruit) {
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(

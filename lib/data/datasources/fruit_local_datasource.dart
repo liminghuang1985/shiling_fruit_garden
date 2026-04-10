@@ -1,30 +1,17 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:sqflite/sqflite.dart';
 import '../models/fruit_model.dart';
 import '../../core/constants/enums.dart';
 import 'database_helper.dart';
+import 'seed_manager.dart';
 
 /// 水果数据源（从 assets JSON 初始化 + SQLite 查询）
 class FruitLocalDatasource {
   List<FruitModel>? _cache;
 
-  /// 初始化数据库（从 assets 加载 JSON 写入 SQLite）
+  /// 触发统一 seed（幂等，由 SeedManager 保证只在必要时执行）
   static Future<void> seedDatabase() async {
-    final db = await DatabaseHelper.database;
-    final count =
-        Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM fruits'));
-    if (count != null && count > 0) return;
-
-    final fruitsJson = await rootBundle.loadString('assets/data/fruits.json');
-    final List<dynamic> fruitsData = json.decode(fruitsJson);
-
-    final batch = db.batch();
-    for (final fruit in fruitsData) {
-      final model = FruitModel.fromJson(fruit as Map<String, dynamic>);
-      batch.insert('fruits', _fruitToMap(model));
-    }
-    await batch.commit(noResult: true);
+    await SeedManager.seedIfNeeded();
   }
 
   static Map<String, dynamic> _fruitToMap(FruitModel fruit) {

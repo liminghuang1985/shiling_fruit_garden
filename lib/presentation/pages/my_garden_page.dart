@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/theme/app_theme.dart';
-import '../../data/models/fruit_model.dart';
+import '../../domain/entities/fruit_entity.dart';
+import '../../data/models/harvest_record_model.dart';
 import '../providers/fruit_providers.dart';
 import 'fruit_detail_page.dart';
 
@@ -69,7 +70,7 @@ class MyGardenPage extends ConsumerWidget {
   Widget _buildContent(
     BuildContext context,
     WidgetRef ref,
-    List<FruitModel> favorites,
+    List<FruitEntity> favorites,
     List<HarvestRecord> records,
   ) {
     return ListView(
@@ -107,7 +108,7 @@ class MyGardenPage extends ConsumerWidget {
   Widget _buildFavoriteCard(
     BuildContext context,
     WidgetRef ref,
-    FruitModel fruit,
+    FruitEntity fruit,
     List<HarvestRecord> records,
   ) {
     final fruitRecords = records.where((r) => r.fruitId == fruit.id).toList();
@@ -238,7 +239,7 @@ class MyGardenPage extends ConsumerWidget {
   Widget _buildRecordChip(
     BuildContext context,
     WidgetRef ref,
-    FruitModel fruit,
+    FruitEntity fruit,
     HarvestRecord record,
   ) {
     return Container(
@@ -279,7 +280,7 @@ class MyGardenPage extends ConsumerWidget {
   Widget _buildAddRecordButton(
     BuildContext context,
     WidgetRef ref,
-    FruitModel fruit,
+    FruitEntity fruit,
   ) {
     return InkWell(
       onTap: () => _showAddHarvestDialog(context, ref, fruit),
@@ -312,7 +313,7 @@ class MyGardenPage extends ConsumerWidget {
   void _showAddHarvestDialog(
     BuildContext context,
     WidgetRef ref,
-    FruitModel fruit,
+    FruitEntity fruit,
   ) {
     DateTime selectedDate = DateTime.now();
     final noteController = TextEditingController();
@@ -386,7 +387,7 @@ class MyGardenPage extends ConsumerWidget {
   List<Widget> _buildHarvestRecords(
     BuildContext context,
     WidgetRef ref,
-    List<FruitModel> favorites,
+    List<FruitEntity> favorites,
     List<HarvestRecord> records,
   ) {
     // Show all records, newest first
@@ -394,7 +395,7 @@ class MyGardenPage extends ConsumerWidget {
       ..sort((a, b) => b.harvestDate.compareTo(a.harvestDate));
 
     return sorted.map((record) {
-      final fruit = favorites.cast<FruitModel?>().firstWhere(
+      final fruit = favorites.cast<FruitEntity?>().firstWhere(
             (f) => f?.id == record.fruitId,
             orElse: () => null,
           );

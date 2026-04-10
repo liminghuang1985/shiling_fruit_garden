@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/theme/app_theme.dart';
-import '../../data/models/fruit_model.dart';
+import '../../domain/entities/fruit_entity.dart';
+import '../../data/datasources/seasonal_calendar_datasource.dart';
 import '../providers/fruit_providers.dart';
 
 class FruitDetailPage extends ConsumerWidget {
-  final FruitModel fruit;
+  final FruitEntity fruit;
 
   const FruitDetailPage({super.key, required this.fruit});
 
@@ -96,6 +97,9 @@ class FruitDetailPage extends ConsumerWidget {
                     title: '🍎 成熟月份',
                     child: _buildMonthBadges(fruit.ripeningMonths),
                   ),
+                  const SizedBox(height: 16),
+                  // 推荐节气
+                  _SolarTermsSection(fruit: fruit),
                   const SizedBox(height: 16),
                   // 种植信息
                   _buildSection(
@@ -362,4 +366,112 @@ class FruitDetailPage extends ConsumerWidget {
       }).toList(),
     );
   }
+}
+
+/// 节气信息区块：显示水果成熟月份对应的节气
+class _SolarTermsSection extends ConsumerWidget {
+  final FruitEntity fruit;
+
+  const _SolarTermsSection({required this.fruit});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final ds = ref.watch(seasonalCalendarDatasourceProvider);
+
+    return FutureBuilder<List<_FruitSolarTerm>>(
+      future: _loadSolarTerms(ds),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData || snapshot.data!.isEmpty) {
+          return const SizedBox.shrink();
+        }
+        final items = snapshot.data!;
+        return Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.04),
+                blurRadius: 8,
+                offset: const Offset(0, 2),
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                '🌿 推荐节气',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: AppTheme.textPrimary,
+                ),
+              ),
+              const SizedBox(height: 12),
+              Wrap(
+                spacing: 10,
+                runSpacing: 10,
+                children: items.map((item) {
+                  final isCurrentMonth = item.month == DateTime.now().month;
+                  return Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    decoration: BoxDecoration(
+                      color: isCurrentMonth
+                          ? AppTheme.primaryGreen.withValues(alpha: 0.15)
+                          : Colors.grey.shade100,
+                      borderRadius: BorderRadius.circular(12),
+                      border: isCurrentMonth
+                          ? Border.all(color: AppTheme.primaryGreen, width: 1.5)
+                          : null,
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          '${item.month}月',
+                          style: TextStyle(
+                            fontSize: 11,
+                            color: isCurrentMonth ? AppTheme.primaryGreen : AppTheme.textSecondary,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        ...item.terms.map((term) => Text(
+                          term,
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: isCurrentMonth ? AppTheme.primaryGreen : AppTheme.textPrimary,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        )),
+                      ],
+                    ),
+                  );
+                }).toList(),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  Future<List<_FruitSolarTerm>> _loadSolarTerms(SeasonalCalendarLocalDatasource ds) async {
+    final results = <_FruitSolarTerm>[];
+    for (final month in fruit.ripeningMonths) {
+      final terms = await ds.getSolarTermsForMonth(month);
+      if (terms.isNotEmpty) {
+        results.add(_FruitSolarTerm(month: month, terms: terms));
+      }
+    }
+    return results;
+  }
+}
+
+class _FruitSolarTerm {
+  final int month;
+  final List<String> terms;
+  _FruitSolarTerm({required this.month, required this.terms});
 }

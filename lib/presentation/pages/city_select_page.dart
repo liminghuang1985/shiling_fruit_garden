@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/theme/app_theme.dart';
 import '../../data/models/city_model.dart';
+import '../../domain/entities/city_entity.dart';
 import '../providers/fruit_providers.dart';
 
 class CitySelectPage extends ConsumerStatefulWidget {
@@ -81,8 +82,17 @@ class _CitySelectPageState extends ConsumerState<CitySelectPage> {
     await prefs.setString('selected_city_id', city.id);
     await prefs.setString('selected_climate_zone', city.climateZoneCode);
 
-    // Update provider
-    ref.read(selectedCityProvider.notifier).setCity(city);
+    // Update provider with CityEntity
+    ref.read(selectedCityProvider.notifier).setCity(
+      CityEntity(
+        id: city.id,
+        name: city.name,
+        nameShort: city.nameShort,
+        province: city.province,
+        climateZoneCode: city.climateZoneCode,
+        pinyinStart: city.pinyinStart,
+      ),
+    );
 
     if (!mounted) return;
     Navigator.pop(context);

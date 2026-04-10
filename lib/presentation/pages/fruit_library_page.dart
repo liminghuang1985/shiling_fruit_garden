@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/constants/enums.dart';
-import '../../data/models/fruit_model.dart';
+import '../../domain/entities/fruit_entity.dart';
 import '../providers/fruit_providers.dart';
 import 'fruit_detail_page.dart';
 
@@ -161,7 +161,7 @@ class _FruitLibraryPageState extends ConsumerState<FruitLibraryPage> {
     );
   }
 
-  List<FruitModel> _filterFruits(List<FruitModel> all) {
+  List<FruitEntity> _filterFruits(List<FruitEntity> all) {
     return all.where((f) {
       final matchesCategory =
           _selectedCategory == null || f.category == _selectedCategory;
@@ -203,7 +203,7 @@ class _FruitLibraryPageState extends ConsumerState<FruitLibraryPage> {
     );
   }
 
-  Widget _buildFruitGrid(List<FruitModel> fruits) {
+  Widget _buildFruitGrid(List<FruitEntity> fruits) {
     return GridView.builder(
       padding: const EdgeInsets.all(16),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -217,7 +217,7 @@ class _FruitLibraryPageState extends ConsumerState<FruitLibraryPage> {
     );
   }
 
-  Widget _buildFruitCard(FruitModel fruit) {
+  Widget _buildFruitCard(FruitEntity fruit) {
     return GestureDetector(
       onTap: () {
         Navigator.push(

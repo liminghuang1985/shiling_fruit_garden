@@ -1,39 +1,15 @@
-import 'dart:convert';
-import 'package:flutter/services.dart';
-import 'package:sqflite/sqflite.dart';
 import '../models/city_model.dart';
 import '../models/climate_zone_model.dart';
-import 'database_helper.dart';
+import 'seed_manager.dart';
 
 /// 城市和气候区数据源
 class CityLocalDatasource {
   List<CityModel>? _cities;
   List<ClimateZoneModel>? _climateZones;
 
+  /// 触发统一 seed（幂等，由 SeedManager 保证只在必要时执行）
   static Future<void> seedDatabase() async {
-    final db = await DatabaseHelper.database;
-
-    final count = Sqflite.firstIntValue(
-        await db.rawQuery('SELECT COUNT(*) FROM cities'));
-    if (count != null && count > 0) return;
-
-    // 加载 climate_zones.json
-    final zonesJson = await rootBundle.loadString('assets/data/climate_zones.json');
-    final List<dynamic> zonesData = json.decode(zonesJson);
-    final zonesBatch = db.batch();
-    for (final zone in zonesData) {
-      zonesBatch.insert('climate_zones', ClimateZoneModel.fromJson(zone as Map<String, dynamic>).toJson());
-    }
-    await zonesBatch.commit(noResult: true);
-
-    // 加载 cities.json
-    final citiesJson = await rootBundle.loadString('assets/data/cities.json');
-    final List<dynamic> citiesData = json.decode(citiesJson);
-    final citiesBatch = db.batch();
-    for (final city in citiesData) {
-      citiesBatch.insert('cities', CityModel.fromJson(city as Map<String, dynamic>).toJson());
-    }
-    await citiesBatch.commit(noResult: true);
+    await SeedManager.seedIfNeeded();
   }
 
   Future<List<CityModel>> getAllCities() async {
