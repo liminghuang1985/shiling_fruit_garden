@@ -1,47 +1,38 @@
 import 'dart:convert';
-import 'package:flutter/services.dart';
+import 'database_helper.dart';
+import 'seed_manager.dart';
 
-/// 节气数据源（从 assets JSON 加载）
+/// 节气数据源（从 DB 查询，SeedManager 负责初始化 DB 数据）
 class SeasonalCalendarLocalDatasource {
-  List<Map<String, dynamic>>? _cache;
-
+  /// 确保 DB 数据已初始化
   static Future<void> seedIfNeeded() async {
-    // 节气数据目前通过 Dart 常量提供，无需 DB seed
+    await SeedManager.seedIfNeeded();
   }
 
-  Future<List<Map<String, dynamic>>> _loadCalendar() async {
-    if (_cache != null) return _cache!;
-    final jsonString = await rootBundle.loadString('assets/data/seasonal_calendar.json');
-    final List<dynamic> data = json.decode(jsonString);
-    _cache = data.cast<Map<String, dynamic>>();
-    return _cache!;
-  }
-
-  /// 获取指定月份和气候区的节气列表
+  /// 从 DB 获取指定月份和气候区的节气列表
   Future<List<String>> getSolarTerms(int month, String climateZoneCode) async {
-    final calendar = await _loadCalendar();
+    await seedIfNeeded();
+    final db = await DatabaseHelper.database;
+    final result = await db.query(
+      'seasonal_calendar',
+      where: 'month = ? AND climate_zone_code = ?',
+      whereArgs: [month, climateZoneCode],
+      limit: 1,
+    );
+    if (result.isEmpty) return [];
+    final terms = result.first['solar_terms'];
+    if (terms == null) return [];
     try {
-      final record = calendar.firstWhere(
-        (r) => r['month'] == month && r['climate_zone_code'] == climateZoneCode,
-      );
-      final terms = record['solar_terms'];
-      if (terms is List) return terms.cast<String>();
+      final decoded = jsonDecode(terms as String);
+      if (decoded is List) return List<String>.from(decoded);
     } catch (_) {}
     return [];
   }
 
-  /// 获取指定月份的所有节气（不区分气候区）
+  /// 获取指定月份的所有节气（不区分气候区，默认用 temperate）
   Future<List<String>> getSolarTermsForMonth(int month) async {
-    final calendar = await _loadCalendar();
-    try {
-      final record = calendar.firstWhere(
-        (r) => r['month'] == month && r['climate_zone_code'] == 'temperate',
-      );
-      final terms = record['solar_terms'];
-      if (terms is List) return terms.cast<String>();
-    } catch (_) {}
-    return [];
+    return getSolarTerms(month, 'temperate');
   }
 
-  void clearCache() => _cache = null;
+  void clearCache() {}
 }

@@ -14,14 +14,16 @@ class SeedManager {
   static bool _seeded = false;
 
   /// 各数据文件的版本号（修改此值将触发对应表的重新 seed）
-  static const int _fruitsVersion = 1;
+  static const int _fruitsVersion = 2;
   static const int _citiesVersion  = 1;
-  static const int _zonesVersion  = 1; // climate_zones 与 cities 同版本
+  static const int _zonesVersion   = 1;
+  static const int _calendarVersion = 1;
 
   /// seed_info 表中的 key 名
-  static const String _keyFruits = 'fruits';
-  static const String _keyZones  = 'climate_zones';
-  static const String _keyCities = 'cities';
+  static const String _keyFruits   = 'fruits';
+  static const String _keyZones    = 'climate_zones';
+  static const String _keyCities   = 'cities';
+  static const String _keyCalendar = 'seasonal_calendar';
 
   /// 主入口：启动时调用一次即可完成所有数据的 seed
   static Future<void> seedIfNeeded() async {
@@ -36,6 +38,8 @@ class SeedManager {
     await _seedClimateZones(db);
     // cities
     await _seedCities(db);
+    // seasonal_calendar
+    await _seedSeasonalCalendar(db);
   }
 
   // ────────────────────────────────────────────
@@ -78,10 +82,14 @@ class SeedManager {
           'contraindications':     f['contraindications'],
           'taste':                 f['taste'],
           'price_range':           f['price_range'],
+          // 新增：气候区、成熟月份、种植月份（v2 新增）
+          'climate_zones':          jsonEncode(f['climate_zones'] ?? []),
+          'ripening_months':       jsonEncode(f['ripening_months'] ?? []),
+          'planting_months':       jsonEncode(f['planting_months'] ?? []),
           'created_at':            now,
           'updated_at':            now,
         },
-        conflictAlgorithm: ConflictAlgorithm.ignore,
+        conflictAlgorithm: ConflictAlgorithm.replace,
       );
     }
     await batch.commit(noResult: true);
@@ -144,6 +152,36 @@ class SeedManager {
     }
     await batch.commit(noResult: true);
     await _setVersion(db, _keyCities, _citiesVersion);
+  }
+
+  // ────────────────────────────────────────────
+  //  seasonal_calendar
+  // ────────────────────────────────────────────
+  static Future<void> _seedSeasonalCalendar(Database db) async {
+    final stored = await _getStoredVersion(db, _keyCalendar);
+    if (stored >= _calendarVersion) return;
+
+    final calendarJson =
+        await rootBundle.loadString('assets/data/seasonal_calendar.json');
+    final List<dynamic> data = json.decode(calendarJson);
+
+    final batch = db.batch();
+    for (final record in data) {
+      final r = record as Map<String, dynamic>;
+      batch.insert(
+        'seasonal_calendar',
+        {
+          'month':                 r['month'],
+          'climate_zone_code':     r['climate_zone_code'],
+          'solar_terms':           jsonEncode(r['solar_terms'] ?? []),
+          'ripening_fruit_ids':    jsonEncode(r['ripening_fruit_ids'] ?? []),
+          'planting_fruit_ids':    jsonEncode(r['planting_fruit_ids'] ?? []),
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace,
+      );
+    }
+    await batch.commit(noResult: true);
+    await _setVersion(db, _keyCalendar, _calendarVersion);
   }
 
   // ────────────────────────────────────────────

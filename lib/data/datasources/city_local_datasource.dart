@@ -1,5 +1,6 @@
 import '../models/city_model.dart';
 import '../models/climate_zone_model.dart';
+import 'database_helper.dart';
 import 'seed_manager.dart';
 
 /// 城市和气候区数据源

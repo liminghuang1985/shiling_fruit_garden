@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/theme/app_theme.dart';
 import '../../domain/entities/fruit_entity.dart';
 import '../../data/models/harvest_record_model.dart';
+import '../../domain/entities/harvest_record_entity.dart';
 import '../providers/fruit_providers.dart';
 import 'fruit_detail_page.dart';
 
@@ -71,7 +72,7 @@ class MyGardenPage extends ConsumerWidget {
     BuildContext context,
     WidgetRef ref,
     List<FruitEntity> favorites,
-    List<HarvestRecord> records,
+    List<HarvestRecordEntity> records,
   ) {
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -109,7 +110,7 @@ class MyGardenPage extends ConsumerWidget {
     BuildContext context,
     WidgetRef ref,
     FruitEntity fruit,
-    List<HarvestRecord> records,
+    List<HarvestRecordEntity> records,
   ) {
     final fruitRecords = records.where((r) => r.fruitId == fruit.id).toList();
 
@@ -240,7 +241,7 @@ class MyGardenPage extends ConsumerWidget {
     BuildContext context,
     WidgetRef ref,
     FruitEntity fruit,
-    HarvestRecord record,
+    HarvestRecordEntity record,
   ) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -266,8 +267,7 @@ class MyGardenPage extends ConsumerWidget {
           GestureDetector(
             onTap: () {
               ref.read(gardenRecordsProvider.notifier).removeRecord(
-                    fruit.id,
-                    record.harvestDate,
+                    record.id,
                   );
             },
             child: Icon(Icons.close, size: 14, color: Colors.orange.shade400),
@@ -388,10 +388,10 @@ class MyGardenPage extends ConsumerWidget {
     BuildContext context,
     WidgetRef ref,
     List<FruitEntity> favorites,
-    List<HarvestRecord> records,
+    List<HarvestRecordEntity> records,
   ) {
     // Show all records, newest first
-    final sorted = List<HarvestRecord>.from(records)
+    final sorted = List<HarvestRecordEntity>.from(records)
       ..sort((a, b) => b.harvestDate.compareTo(a.harvestDate));
 
     return sorted.map((record) {
@@ -446,8 +446,7 @@ class MyGardenPage extends ConsumerWidget {
                   size: 20, color: Colors.orange.shade400),
               onPressed: () {
                 ref.read(gardenRecordsProvider.notifier).removeRecord(
-                      fruit.id,
-                      record.harvestDate,
+                      record.id,
                     );
               },
             ),

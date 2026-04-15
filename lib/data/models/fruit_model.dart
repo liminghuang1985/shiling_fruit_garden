@@ -102,18 +102,30 @@ class FruitModel {
       contraindications: json['contraindications'] as String? ?? '',
       taste: json['taste'] as String? ?? '',
       priceRange: json['price_range'] as String? ?? '',
-      climateZones: (json['climate_zones'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          [],
-      ripeningMonths: (json['ripening_months'] as List<dynamic>?)
-              ?.map((e) => e as int)
-              .toList() ??
-          [],
-      plantingMonths: (json['planting_months'] as List<dynamic>?)
-              ?.map((e) => e as int)
-              .toList() ??
-          [],
+      climateZones: json['climate_zones'] is String
+          ? (jsonDecode(json['climate_zones'] as String) as List<dynamic>)
+                .map((e) => e as String)
+                .toList()
+          : (json['climate_zones'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              [],
+      ripeningMonths: json['ripening_months'] is String
+          ? (jsonDecode(json['ripening_months'] as String) as List<dynamic>)
+                .map((e) => e as int)
+                .toList()
+          : (json['ripening_months'] as List<dynamic>?)
+                  ?.map((e) => e as int)
+                  .toList() ??
+              [],
+      plantingMonths: json['planting_months'] is String
+          ? (jsonDecode(json['planting_months'] as String) as List<dynamic>)
+                .map((e) => e as int)
+                .toList()
+          : (json['planting_months'] as List<dynamic>?)
+                  ?.map((e) => e as int)
+                  .toList() ??
+              [],
     );
   }
 

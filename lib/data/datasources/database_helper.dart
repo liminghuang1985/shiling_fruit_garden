@@ -7,7 +7,7 @@ import 'package:path_provider/path_provider.dart';
 class DatabaseHelper {
   static Database? _database;
   static const String _dbName = 'shiling_fruit_garden.db';
-  static const int _dbVersion = 1;
+  static const int _dbVersion = 2;
 
   /// 获取数据库实例（移动端用 sqflite，桌面端用 ffi）
   static Future<Database> get database async {
@@ -81,6 +81,9 @@ class DatabaseHelper {
         contraindications TEXT,
         taste TEXT,
         price_range TEXT,
+        climate_zones TEXT DEFAULT '[]',
+        ripening_months TEXT DEFAULT '[]',
+        planting_months TEXT DEFAULT '[]',
         created_at INTEGER,
         updated_at INTEGER
       )
@@ -196,7 +199,15 @@ class DatabaseHelper {
 
   static Future<void> _onUpgrade(
       Database db, int oldVersion, int newVersion) async {
-    // 后续版本升级逻辑写这里
+    if (oldVersion < 2) {
+      // v2: 给 fruits 表新增气候区、成熟月份、种植月份三个字段
+      await db.execute(
+          "ALTER TABLE fruits ADD COLUMN climate_zones TEXT DEFAULT '[]'");
+      await db.execute(
+          "ALTER TABLE fruits ADD COLUMN ripening_months TEXT DEFAULT '[]'");
+      await db.execute(
+          "ALTER TABLE fruits ADD COLUMN planting_months TEXT DEFAULT '[]'");
+    }
   }
 
   /// 关闭数据库
